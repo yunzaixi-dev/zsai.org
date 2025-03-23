@@ -12,20 +12,6 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero', styles.heroBanner)}>
-      {/* 左侧小装饰 */}
-      <div className={styles.sideDecor} style={{left: '30px', position: 'absolute', top: '50%'}}>
-        <span>&lt;</span>
-        <span>/</span>
-        <span>&gt;</span>
-      </div>
-      
-      {/* 右侧小装饰 */}
-      <div className={styles.sideDecor} style={{right: '30px', position: 'absolute', top: '50%'}}>
-        <span>{'{}'}</span>
-        <span>()</span>
-        <span>[]</span>
-      </div>
-      
       <div className="container">
         {/* 中心渐变色圆球 */}
         <div className={styles.logoContainer}>
