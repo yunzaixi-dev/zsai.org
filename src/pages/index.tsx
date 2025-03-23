@@ -45,14 +45,16 @@ function HomepageHeader() {
         
         <div className={styles.buttons}>
           <Link
-            className={clsx('button', styles.buttonPrimary)}
-            to="/docs/intro">
-            开始探索
+            className={clsx('button', styles.buttonDiscord)}
+            to="https://discord.gg/DaePbQXhnH"
+            target="_blank"
+            rel="noopener noreferrer">
+            加入Discord
           </Link>
           <Link
             className={clsx('button', styles.buttonSecondary)}
-            to="/blog">
-            了解更多
+            to="/docs/intro">
+            开始探索
           </Link>
         </div>
       </div>
