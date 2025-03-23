@@ -28,3 +28,192 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* 优化页脚样式 */
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 0 2rem;
+  background: linear-gradient(180deg, #0d1525 0%, #1a2234 100%);
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(41, 182, 246, 0.2), transparent);
+}
+
+/* 添加高端背景格纹 */
+.footer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle, rgba(41, 182, 246, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* 优化页脚内容布局 */
+.footer__links {
+  margin-bottom: 3rem;
+}
+
+.footer__col {
+  margin-bottom: 2rem;
+}
+
+/* 标题样式 */
+.footer__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #f3f4f6;
+  position: relative;
+  display: inline-block;
+}
+
+.footer__title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #29B6F6;
+}
+
+/* 链接样式 */
+.footer__link-item {
+  display: block;
+  padding: 0.4rem 0;
+  color: #b0bec5;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.footer__link-item:hover {
+  color: #29B6F6;
+  text-decoration: none;
+  transform: translateX(5px);
+}
+
+/* 版权信息 */
+.footer__copyright {
+  font-size: 0.9rem;
+  color: #64748b;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* 社交媒体图标 */
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #b0bec5;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #0175C2;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* 页脚分隔线 */
+.footer__bottom {
+  position: relative;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+}
+
+.footer__bottom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(41, 182, 246, 0.1), transparent);
+}
+
+/* 页脚版权链接 */
+.footer__bottom a {
+  color: #0175C2;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.footer__bottom a:hover {
+  color: #29B6F6;
+  text-decoration: none;
+}
+
+/* 页脚LOGO */
+.footer__logo {
+  margin-bottom: 1.5rem;
+}
+
+/* 添加核心价值观视觉样式 */
+.footer__core-values {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0 2rem;
+}
+
+.footer__value-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #b0bec5;
+}
+
+.footer__value-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.5rem;
+  fill: #0175C2;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.footer__value-item:hover .footer__value-icon {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.footer__value-text {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* 响应式调整 */
+@media (max-width: 996px) {
+  .footer__core-values {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
