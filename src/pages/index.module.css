@@ -575,3 +575,41 @@ html[data-theme='dark'] .abstractElement3 span:nth-child(1),
 html[data-theme='dark'] .abstractElement3 span:nth-child(2) {
   background: #5151e5;
 }
+
+/* 横幅侧边装饰符号 */
+.sideDecor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transform: translateY(-50%);
+  z-index: 2;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.sideDecor span {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5865F2;
+  text-shadow: 0 1px 3px rgba(88, 101, 242, 0.2);
+}
+
+.sideDecor:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* 暗色模式适配 */
+html[data-theme='dark'] .sideDecor span {
+  color: #7984F5;
+  text-shadow: 0 1px 3px rgba(121, 132, 245, 0.3);
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 996px) {
+  .sideDecor {
+    display: none; /* 小屏幕隐藏 */
+  }
+}
