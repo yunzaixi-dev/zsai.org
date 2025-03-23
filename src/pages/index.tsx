@@ -81,7 +81,7 @@ function HomepageHeader() {
         </div>
         
         {/* 社区介绍 */}
-        <p className={styles.communityDescription}>
+        <p className={styles.communityDescription} style={{marginTop: '1rem'}}>
           智识ΑIEΣΣΥΔΟ社区的开源教程仓库，
           <Link to="/docs/intro" className={styles.exploreLink}>
             开始探索
