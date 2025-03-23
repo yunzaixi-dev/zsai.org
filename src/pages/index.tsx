@@ -13,13 +13,19 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
-        {/* 添加Logo到标题上方 */}
+        {/* 抽象图形设计 - 象征平等、开放和共享 */}
         <div className={styles.logoContainer}>
-          <img 
-            src="/img/logo.png" 
-            alt="智识ΑIEΣΣΥΔΟ Logo" 
-            className={styles.logo}
-          />
+          <div className={styles.medalFrame}>
+            <div className={styles.abstractLogo}>
+              <div className={styles.abstractCircle}></div>
+              <div className={styles.abstractElement1}></div>
+              <div className={styles.abstractElement2}></div>
+              <div className={styles.abstractElement3}>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
         </div>
         
         <Heading as="h1" className="hero__title">

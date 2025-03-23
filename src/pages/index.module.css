@@ -115,7 +115,7 @@ html[data-theme='dark'] .buttonSecondary:hover {
   border-color: #29B6F6;
 }
 
-/* Logo样式 */
+/* Logo容器样式 */
 .logoContainer {
   margin-bottom: 1.5rem;
   display: flex;
@@ -123,25 +123,96 @@ html[data-theme='dark'] .buttonSecondary:hover {
   align-items: center;
 }
 
-.logo {
-  height: 120px;
-  width: auto;
-  filter: drop-shadow(0 4px 10px rgba(1, 117, 194, 0.2));
-  transition: all 0.3s ease;
-  border-radius: 60px;
-  background: rgba(255, 255, 255, 0.7);
+/* Instagram风格渐变圆环框架 */
+.medalFrame {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  /* 显著增加内边距使圆环更粗 */
   padding: 10px;
-  box-shadow: 0 8px 30px rgba(1, 117, 194, 0.1);
+  /* 更温暖亲切的渐变色调 */
+  background: linear-gradient(45deg, 
+    #ffdc80 0%, /* 暖黄色 */
+    #fcaf45 15%, /* 温暖橙色 */
+    #f77737 30%, /* 柔和橙红 */
+    #f56040 45%, /* 温和红色 */
+    #fd1d1d 60%, /* 明亮红色 */
+    #e1306c 75%, /* 柔和粉红 */
+    #c13584 90%, /* 温暖紫色 */
+    #833ab4 100% /* 柔和紫色 */
+  );
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
 }
 
-.logo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 40px rgba(1, 117, 194, 0.15);
+/* 内部容器 */
+.logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: white;
+  /* 保留原logo色彩 */
+  filter: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
+/* 悬停效果 */
+.medalFrame:hover {
+  transform: scale(1.03);
+  /* 悬停时让色彩更加温暖亲切 */
+  background: linear-gradient(45deg, 
+    #ffdc80 0%, 
+    #fcaf45 15%, 
+    #f77737 30%, 
+    #f56040 45%, 
+    #fd1d1d 60%, 
+    #e1306c 75%, 
+    #c13584 90%, 
+    #833ab4 100%
+  );
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.medalFrame:hover .logo {
+  transform: scale(0.98);
+}
+
+/* 光泽效果 - 温暖的光泽 */
+.medalFrame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.3) 0%, 
+    rgba(255, 255, 255, 0) 50%, 
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* 暗色模式适配 */
 html[data-theme='dark'] .logo {
-  filter: drop-shadow(0 4px 10px rgba(2, 136, 209, 0.3));
-  background: rgba(30, 41, 59, 0.5);
+  background-color: #121212;
+}
+
+/* 暗色模式下保持温暖的渐变色 */
+html[data-theme='dark'] .medalFrame {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* pub.dev 风格的搜索框 */
@@ -200,4 +271,185 @@ html[data-theme='dark'] .searchInput:focus {
 
 html[data-theme='dark'] .searchContainer::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2329B6F6'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
+}
+
+/* 抽象logo设计 */
+.abstractLogo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* 抽象logo中心圆形 - 代表平等的核心 */
+.abstractCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f5bd5, #0095f6);
+  position: absolute;
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(79, 91, 213, 0.4);
+}
+
+/* 抽象元素1 - 代表天平（平等） */
+.abstractElement1 {
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4f5bd5, #0095f6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(79, 91, 213, 0.3);
+}
+
+.abstractElement1::before,
+.abstractElement1::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(79, 91, 213, 0.8);
+  bottom: -8px;
+}
+
+.abstractElement1::before {
+  left: -5px;
+}
+
+.abstractElement1::after {
+  right: -5px;
+}
+
+/* 抽象元素2 - 代表敞开的门（开放） */
+.abstractElement2 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 4px solid transparent;
+  border-bottom-color: #4f5bd5;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: 1;
+}
+
+/* 抽象元素3 - 代表连接的节点（共享） */
+.abstractElement3 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px dashed rgba(79, 91, 213, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.abstractElement3::before,
+.abstractElement3::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4f5bd5;
+}
+
+.abstractElement3::before {
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.abstractElement3::after {
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 添加两个额外的连接点 */
+.abstractElement3 span:nth-child(1),
+.abstractElement3 span:nth-child(2) {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4f5bd5;
+}
+
+.abstractElement3 span:nth-child(1) {
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.abstractElement3 span:nth-child(2) {
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 动画效果 */
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.5; transform: scale(0.95); }
+}
+
+.abstractElement2 {
+  animation: rotate 20s infinite linear;
+}
+
+.abstractCircle {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+/* 暗色模式适配 */
+html[data-theme='dark'] .abstractLogo {
+  background-color: #121212;
+}
+
+html[data-theme='dark'] .abstractCircle {
+  background: linear-gradient(135deg, #5151e5, #25d0e2);
+  box-shadow: 0 0 15px rgba(81, 81, 229, 0.5);
+}
+
+html[data-theme='dark'] .abstractElement1 {
+  background: linear-gradient(90deg, #5151e5, #25d0e2);
+}
+
+html[data-theme='dark'] .abstractElement1::before,
+html[data-theme='dark'] .abstractElement1::after {
+  background: rgba(81, 81, 229, 0.8);
+}
+
+html[data-theme='dark'] .abstractElement2 {
+  border-bottom-color: #5151e5;
+}
+
+html[data-theme='dark'] .abstractElement3 {
+  border-color: rgba(81, 81, 229, 0.5);
+}
+
+html[data-theme='dark'] .abstractElement3::before,
+html[data-theme='dark'] .abstractElement3::after,
+html[data-theme='dark'] .abstractElement3 span:nth-child(1),
+html[data-theme='dark'] .abstractElement3 span:nth-child(2) {
+  background: #5151e5;
 }
