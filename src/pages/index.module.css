@@ -209,18 +209,31 @@ html[data-theme='dark'] .buttonSecondary:hover {
   filter: brightness(0) saturate(100%) invert(69%) sepia(55%) saturate(1808%) hue-rotate(165deg) brightness(102%) contrast(98%); /* #29b6f6 颜色 */
 }
 
-/* 放大的搜索框容器 */
+/* 搜索框样式优化 - 统一定义，移除重复样式 */
 .searchContainer {
   position: relative;
-  width: 95%;
-  max-width: 800px; 
-  margin: 0 auto 3rem;
+  width: 80%;
+  max-width: 800px;
+  margin: 2rem auto 3rem;
+}
+
+.searchContainer form {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.searchInputWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .enlargedSearchInput {
   width: 100%;
-  height: 70px; /* 降低搜索框高度 */
-  padding: 0 3rem 0 5rem;
+  height: 70px;
+  padding: 0 30px 0 70px;
   font-size: 1.4rem;
   background: #35404d; 
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -236,21 +249,52 @@ html[data-theme='dark'] .buttonSecondary:hover {
   font-size: 1.4rem;
 }
 
-/* 搜索图标调整 */
-.searchContainer::after {
-  content: '';
+/* 移除搜索框点击时的发光效果 */
+.enlargedSearchInput:focus {
+  background: #35404d;
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 搜索按钮样式 */
+.searchButton {
   position: absolute;
+  left: 20px;
   top: 50%;
-  left: 2.5rem;
   transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23888888'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  pointer-events: none;
-  opacity: 0.9;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.searchButton:focus {
+  outline: none;
+}
+
+.searchButton:hover .searchIcon {
+  opacity: 1;
+}
+
+/* 搜索图标样式 */
+.searchIcon {
+  width: 24px;
+  height: 24px;
+  fill: #888888;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+/* 清除多余的搜索图标 */
+.searchContainer::after {
+  display: none;
 }
 
 /* 社区介绍样式 */
@@ -264,7 +308,7 @@ html[data-theme='dark'] .buttonSecondary:hover {
 }
 
 /* Instagram风格的搜索框 - 玻璃质感设计 */
-.searchContainer {
+/* .searchContainer {
   max-width: 800px;
   margin: 2rem auto 0;
   position: relative;
@@ -328,7 +372,7 @@ html[data-theme='dark'] .searchInput:focus {
 }
 
 /* 添加搜索图标 */
-.searchContainer::after {
+/* .searchContainer::after {
   content: "";
   position: absolute;
   right: 1rem;
@@ -344,7 +388,7 @@ html[data-theme='dark'] .searchInput:focus {
 
 html[data-theme='dark'] .searchContainer::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2329B6F6'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
-}
+} */
 
 /* Instagram风格渐变圆环框架 */
 .medalFrame {
@@ -810,19 +854,18 @@ html[data-theme='dark'] .medalFrame {
 
 /* 探索链接样式 */
 .exploreLink {
-  color: #29b6f6;
+  color: #f0e6c9;
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 1px solid rgba(41, 182, 246, 0.4);
+  border-bottom: 1px solid rgba(240, 230, 201, 0.4);
   padding-bottom: 2px;
   transition: all 0.2s ease;
   margin-left: 5px;
 }
 
 .exploreLink:hover {
-  color: #4fc3f7;
-  border-bottom-color: #4fc3f7;
-  text-shadow: 0 0 10px rgba(41, 182, 246, 0.3);
+  color: #ffedc2;
+  border-bottom-color: #ffedc2;
 }
 
 /* Support by文本样式 */
@@ -900,37 +943,47 @@ a.elegantFont:hover {
   }
 }
 
-/* 超宽屏媒体查询 */
-@media screen and (min-width: 1600px) {
+/* 确保搜索框在移动设备上正确显示 */
+@media screen and (max-width: 768px) {
   .searchContainer {
-    width: 98%;
-    max-width: 1800px;
+    width: 90%;
   }
   
   .enlargedSearchInput {
-    height: 100px; /* 更高的搜索框 */
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    height: 60px;
+  }
+  
+  .enlargedSearchInput::placeholder {
+    font-size: 1.1rem;
   }
 }
 
-@media screen and (min-width: 2000px) {
-  .searchContainer {
-    width: 1900px; /* 固定宽度，确保足够长 */
-  }
+/* 搜索框样式优化 */
+/* .searchContainer {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 2rem auto 3rem;
 }
 
-/* 精确匹配pub.dev的主色调 */
-:root {
-  --primary-color: #0175C2; 
-  --hover-color: #0160a1; 
-  --secondary-color: #f3f3f3; 
+.searchContainer form {
+  display: flex;
+  position: relative;
+  width: 100%;
 }
 
-/* 搜索框颜色和样式优化 */
+.searchInputWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .enlargedSearchInput {
   width: 100%;
   height: 70px;
-  padding: 0 3rem 0 5rem;
+  padding: 0 70px 0 30px;
   font-size: 1.4rem;
   background: #35404d; 
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -941,110 +994,67 @@ a.elegantFont:hover {
   color: #888888;
 }
 
+.enlargedSearchInput::placeholder {
+  color: #888888;
+  font-size: 1.4rem;
+}
+
+/* 移除搜索框点击时的发光效果 */
 .enlargedSearchInput:focus {
   background: #35404d;
   outline: none;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  border-color: var(--primary-color);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* 搜索图标颜色优化 */
-.searchContainer::after {
-  content: '';
+/* 搜索按钮样式 */
+.searchButton {
   position: absolute;
+  right: 20px;
   top: 50%;
-  left: 2.5rem;
   transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23888888'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  pointer-events: none;
-  opacity: 0.9;
-}
-
-/* 更新按钮样式 */
-.buttonDiscord {
-  background-color: var(--primary-color);
-  color: white;
+  background: transparent;
   border: none;
-  border-radius: 4px;
-  padding: 0.85rem 2.2rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 4px 14px rgba(1, 117, 194, 0.3);
+  justify-content: center;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s ease;
+  z-index: 1;
 }
 
-.buttonDiscord:hover {
-  background-color: var(--hover-color);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(1, 117, 194, 0.4);
+.searchButton:focus {
+  outline: none;
 }
 
-.buttonSecondary {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  border-radius: 4px;
-  padding: 0.8rem 2rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.searchButton:hover .searchIcon {
+  opacity: 1;
 }
 
-.buttonSecondary:hover {
-  background-color: rgba(1, 117, 194, 0.1);
-  color: var(--hover-color);
-  border-color: var(--hover-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(1, 117, 194, 0.15);
+/* 搜索图标样式 */
+.searchIcon {
+  width: 24px;
+  height: 24px;
+  fill: #888888;
+  opacity: 0.8;
+  transition: all 0.2s ease;
 }
 
-/* 响应式布局优化 */
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 4rem 0;
-  }
-  
-  .titleContainer {
-    transform: scale(0.85);
-    transform-origin: center;
-    margin-bottom: 1.5rem;
-  }
-  
-  .headerIcon {
-    margin-right: 0;
-    height: 80px;
+/* 确保搜索框在移动设备上正确显示 */
+@media screen and (max-width: 768px) {
+  .searchContainer {
+    width: 90%;
   }
   
   .enlargedSearchInput {
-    height: 70px;
-    font-size: 1.2rem;
-    padding: 0 2rem 0 4rem;
+    font-size: 1.1rem;
+    height: 60px;
   }
   
-  .searchContainer::after {
-    width: 28px;
-    height: 28px;
-    left: 1.5rem;
-  }
-  
-  .buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .buttonDiscord, .buttonSecondary {
-    width: 80%;
-    justify-content: center;
+  .enlargedSearchInput::placeholder {
+    font-size: 1.1rem;
   }
 }
 
