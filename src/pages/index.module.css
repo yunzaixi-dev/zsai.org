@@ -10,12 +10,40 @@
   overflow: hidden;
   background: linear-gradient(135deg, #f5f7fa 0%, #e4f0fc 100%);
   color: #2a4b8d;
+  position: relative;
+}
+
+/* 网格花纹背景 */
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(1, 117, 194, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(1, 117, 194, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 0;
 }
 
 /* 暗色模式适配 */
 html[data-theme='dark'] .heroBanner {
   background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
   color: #e2e8f0;
+}
+
+/* 暗色模式网格 */
+html[data-theme='dark'] .heroBanner::before {
+  background-image: 
+    linear-gradient(rgba(2, 136, 209, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 136, 209, 0.1) 1px, transparent 1px);
+}
+
+.heroBanner > div {
+  position: relative;
+  z-index: 1;
 }
 
 @media screen and (max-width: 996px) {
@@ -100,25 +128,47 @@ html[data-theme='dark'] .buttonSecondary:hover {
   font-size: 1rem;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
 }
 
+/* 改进暗色模式搜索框 */
 html[data-theme='dark'] .searchInput {
-  background-color: #2d3748;
-  border-color: #4a5568;
+  background-color: rgba(30, 41, 59, 0.8);
+  border-color: rgba(30, 41, 59, 0.3);
   color: #e2e8f0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .searchInput:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(1, 117, 194, 0.3);
   border-color: #0175C2;
+  background-color: white;
 }
 
 html[data-theme='dark'] .searchInput:focus {
   box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.4);
   border-color: #0288D1;
+  background-color: rgba(30, 41, 59, 1);
+}
+
+/* 添加搜索图标 */
+.searchContainer::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230175C2'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+html[data-theme='dark'] .searchContainer::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2329B6F6'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
 }
