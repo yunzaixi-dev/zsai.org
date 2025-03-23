@@ -27,20 +27,10 @@ function HomepageHeader() {
       </div>
       
       <div className="container">
-        {/* 抽象图形设计 - 象征平等、开放和共享 */}
+        {/* 中心渐变色圆球 */}
         <div className={styles.logoContainer}>
           <div className={styles.logoTag} style={{marginRight: "15px"}}>&lt;/</div>
-          <div className={styles.medalFrame}>
-            <div className={styles.abstractLogo}>
-              <div className={styles.abstractCircle}></div>
-              <div className={styles.abstractElement1}></div>
-              <div className={styles.abstractElement2}></div>
-              <div className={styles.abstractElement3}>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-          </div>
+          <div className={styles.simpleGradientBall}></div>
           <div className={styles.logoTag} style={{marginLeft: "15px"}}>/&gt;</div>
         </div>
         
