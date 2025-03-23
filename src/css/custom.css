@@ -292,49 +292,59 @@ html[data-theme='dark'] .navbar-github-link::before {
   align-items: center;
 }
 
-/* 统一导航栏样式 - 在亮暗模式下保持一致 */
+/* 导航栏样式 - 适用于所有主题 */
 .navbar {
   background-color: #1c2834;
 }
 
-/* 确保导航栏文本在深色背景上可见 */
-.navbar__title,
-.navbar__link,
-.navbar__toggle,
-.navbar-sidebar__brand {
-  color: white;
+/* 导航栏文本颜色 - 白色 */
+.navbar .navbar__title,
+.navbar .navbar__link,
+.navbar .navbar__toggle,
+.navbar .navbar-sidebar__brand,
+.navbar .navbar__item,
+.navbar .navbar-sidebar__items {
+  color: white !important;
 }
 
-/* 导航栏标题淡金色 */
-.navbar__title {
-  color: white; /* 淡金色 #f0e6c9 */
+/* 导航栏链接悬停和激活状态 */
+.navbar .navbar__link:hover,
+.navbar .navbar__link--active {
+  color: #29B6F6 !important;
 }
 
-.navbar__link:hover,
-.navbar__link--active {
-  color: #29B6F6;
+/* 导航栏下拉菜单 */
+.navbar .dropdown__link,
+.navbar .dropdown__link--active,
+.navbar .dropdown__link:hover,
+.navbar .dropdown__menu {
+  --ifm-dropdown-link-color: white !important;
+  color: white !important;
 }
 
-/* 适配暗色模式 */
-html[data-theme='dark'] .navbar {
-  background-color: #1c2834; /* 保持与亮色模式一样的颜色 */
+/* 导航栏搜索图标 */
+.navbar .navbar__search-input::placeholder,
+.navbar .navbar__search-icon {
+  color: white !important;
 }
 
-html[data-theme='dark'] .navbar__title,
-html[data-theme='dark'] .navbar__link,
-html[data-theme='dark'] .navbar__toggle,
-html[data-theme='dark'] .navbar-sidebar__brand {
-  color: white;
+/* 侧边栏样式 - 亮色模式 */
+html[data-theme='light'] .menu__link,
+html[data-theme='light'] .menu__link--active,
+html[data-theme='light'] .menu__link:hover {
+  color: #000 !important; /* 黑色 */
 }
 
-html[data-theme='dark'] .navbar__link:hover,
-html[data-theme='dark'] .navbar__link--active {
-  color: #29B6F6;
+/* 侧边栏样式 - 暗色模式 */
+html[data-theme='dark'] .menu__link,
+html[data-theme='dark'] .menu__link--active,
+html[data-theme='dark'] .menu__link:hover {
+  color: white !important; /* 白色 */
 }
 
-/* 导航栏底部边框 */
-.navbar::after {
-  display: none;
+/* 确保导航栏LOGO使用原始图片 */
+.navbar__logo {
+  filter: none !important;
 }
 
 /* 主题切换按钮样式 */
@@ -386,38 +396,18 @@ html[data-theme='light'] .navbar svg[class*="darkToggleIcon_"] {
   fill: white !important;
 }
 
-/* 添加导航栏相关样式 */
-/* 确保导航栏文本始终为淡金色 */
-.navbar__title,
-.navbar__link,
-.navbar__toggle,
-.navbar-sidebar__brand,
-.navbar__item,
-.navbar-sidebar__items,
-.navbar__link--active,
+/* 导航栏相关样式 */
 .navbar__link:hover,
-.dropdown__link,
-.dropdown__link--active,
-.dropdown__link:hover,
-.menu__link,
-.menu__link--active,
-.menu__link:hover {
-  color: white !important; /* 淡金色，使用!important确保覆盖其他样式 */
+.navbar__link--active {
+  color: #29B6F6;
 }
 
-/* 导航栏下拉菜单文本 */
-.dropdown__menu {
-  --ifm-dropdown-link-color: white !important;
+/* 适配暗色模式 */
+html[data-theme='dark'] .navbar {
+  background-color: #1c2834; /* 保持与亮色模式一样的颜色 */
 }
 
-/* 确保导航栏LOGO使用原始图片 */
-.navbar__logo {
-  /* 移除滤镜效果，显示原始图片 */
-  filter: none !important;
-}
-
-/* 确保搜索图标为淡金色 */
-.navbar__search-input::placeholder,
-.navbar__search-icon {
-  color: white !important;
+html[data-theme='dark'] .navbar__link:hover,
+html[data-theme='dark'] .navbar__link--active {
+  color: #29B6F6;
 }
