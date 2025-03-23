@@ -305,6 +305,11 @@ html[data-theme='dark'] .navbar-github-link::before {
   color: white;
 }
 
+/* 导航栏标题淡金色 */
+.navbar__title {
+  color: #f0e6c9; /* 淡金色 #f0e6c9 */
+}
+
 .navbar__link:hover,
 .navbar__link--active {
   color: #29B6F6;
@@ -334,7 +339,6 @@ html[data-theme='dark'] .navbar__link--active {
 
 /* 主题切换按钮样式 */
 .navbar__item.navbar__link,
-.navbar__title,
 .navbar-sidebar__brand {
   color: white;
 }

@@ -175,18 +175,24 @@ html[data-theme='dark'] .buttonSecondary:hover {
 /* 标题和Logo容器 */
 .titleContainer {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 /* 头部Logo样式 */
 .headerLogo {
   height: 75px;
   width: auto;
-  margin-top: -5px;
-  filter: brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(2559%) hue-rotate(195deg) brightness(96%) contrast(101%); /* #01579b 深蓝色 */
+  margin-bottom: 3px;
+  filter: brightness(0) saturate(100%) invert(92%) sepia(18%) saturate(320%) hue-rotate(345deg) brightness(103%) contrast(90%); /* 淡金色 #f0e6c9 */
+}
+
+.headerLogo:hover {
+  opacity: 1;
+  filter: brightness(0) saturate(100%) invert(95%) sepia(38%) saturate(423%) hue-rotate(325deg) brightness(106%) contrast(96%);
+  transition: all 0.3s ease;
 }
 
 .titleContainer h1 {
@@ -194,6 +200,11 @@ html[data-theme='dark'] .buttonSecondary:hover {
   font-weight: 600;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   letter-spacing: 0.5px;
+  color: #f0e6c9; /* 淡金色 #f0e6c9 */
+  margin-bottom: 0;
+  line-height: 1;
+  position: relative;
+  top: -3px;
 }
 
 /* 天平图标样式 */
