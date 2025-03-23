@@ -34,33 +34,69 @@
 .footer {
   position: relative;
   overflow: hidden;
-  padding: 4rem 0 2rem;
-  background: linear-gradient(180deg, #0d1525 0%, #1a2234 100%);
+  padding: 1rem 0;
+  background: #1b1b1d;
+  color: white;
+  font-size: 0.9rem;
+  border-top: none;
 }
 
+/* 移除网格背景，改为简洁风格 */
 .footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(41, 182, 246, 0.2), transparent);
+  display: none !important;
 }
 
-/* 添加高端背景格纹 */
+/* 移除顶部分隔线 */
 .footer::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(circle, rgba(41, 182, 246, 0.03) 1px, transparent 1px);
-  background-size: 20px 20px;
-  opacity: 0.3;
-  pointer-events: none;
+  display: none !important;
+}
+
+/* 移除所有可能的分割线 */
+.footer *, .footer *::before, .footer *::after {
+  border-top: none !important;
+}
+
+/* 重置页脚容器边框 */
+.footer > div, .footer > div::before, .footer > div::after,
+.footer-wrapper, .footer-wrapper::before, .footer-wrapper::after,
+.footer__bottom, .footer__bottom::before, .footer__bottom::after {
+  border-top: none !important;
+}
+
+/* 确保内容显示正常 */
+.footer__items, 
+.footer__links,
+.footer__title,
+.footer__link-item,
+.footer__copyright,
+.footer__logo,
+.footer__core-values {
+  position: relative;
+  z-index: 2;
+}
+
+/* 页脚链接样式 */
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* 页脚Logo淡金色版本 */
+.footer-logo-gold {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(18%) saturate(320%) hue-rotate(345deg) brightness(103%) contrast(90%);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.footer-logo-gold:hover {
+  opacity: 1;
+  filter: brightness(0) saturate(100%) invert(95%) sepia(38%) saturate(423%) hue-rotate(325deg) brightness(106%) contrast(96%);
 }
 
 /* 优化页脚内容布局 */
