@@ -1,0 +1,207 @@
+{
+  "main": {
+    "id": "7606ba7d6b5af720",
+    "type": "split",
+    "children": [
+      {
+        "id": "bd4b310f055ba1d0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8d577795c8431557",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "646f5685c8705124",
+    "type": "split",
+    "children": [
+      {
+        "id": "e517e8dd31479d17",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c5af0f185551259",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "ff64bef0501a98c9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "46c33563355d7516",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9d72d5585b629e52",
+    "type": "split",
+    "children": [
+      {
+        "id": "3ccbb6cc8bffb38d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "68899bdd3afb9a98",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "982556765444e088",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "d6057e490c96ce99",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "8f1239b7a63b3b3c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "8d577795c8431557",
+  "lastOpenFiles": [
+    "docs/不务正业/_category_.json",
+    "docs/不务正业/简介.md",
+    "docs/不务正业/img",
+    "docs/不务正业",
+    "docs/岁月史书/正史.md",
+    "docs/岁月史书/野史.md",
+    "docs/岁月史书/_category_.json",
+    "docs/岁月史书/img",
+    "docs/岁月史书",
+    "docs/深度求索/简介.md",
+    "docs/深度求索/_category_.json",
+    "docs/深度求索/img",
+    "docs/万卷书/deploy-your-site.md",
+    "docs/万卷书/markdown-features.mdx",
+    "docs/万卷书/_category_.json",
+    "docs/万卷书/create-a-page.md",
+    "docs/万卷书/create-a-document.md",
+    "docs/万卷书/create-a-blog-post.md",
+    "docs/万卷书/congratulations.md",
+    "docs/万卷书",
+    "docs/万里路/img/localeDropdown.png",
+    "docs/万里路/img/docsVersionDropdown.png",
+    "docs/万里路/translate-your-site.md",
+    "docs/万里路/manage-docs-versions.md",
+    "docs/引言.md",
+    "docs/所谓引言.md",
+    "docs/行万里路/img/localeDropdown.png",
+    "docs/行万里路/img/docsVersionDropdown.png",
+    "docs/行万里路/translate-your-site.md",
+    "docs/行万里路/manage-docs-versions.md",
+    "docs/读万卷书/create-a-blog-post.md",
+    "docs/读万卷书/create-a-page.md",
+    "docs/读万卷书/deploy-your-site.md",
+    "docs/读万卷书/create-a-document.md",
+    "docs/读万卷书/congratulations.md",
+    "docs/所谓理论/deploy-your-site.md",
+    "docs/所谓理论/create-a-page.md",
+    "docs/所谓理论/create-a-document.md",
+    "docs/所谓理论/create-a-blog-post.md",
+    "docs/所谓理论/congratulations.md"
+  ]
+}
