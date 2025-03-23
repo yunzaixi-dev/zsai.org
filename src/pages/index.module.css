@@ -4,32 +4,13 @@
  */
 
 .heroBanner {
-  padding: 6rem 0;
+  padding: 7rem 0 6rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4f0fc 100%);
-  color: #2a4b8d;
+  background: #12202f; 
+  color: white;
   position: relative;
-}
-
-/* 银质装饰线 */
-.heroBanner::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, 
-    #c0c0c0 0%, 
-    #e8e8e8 20%, 
-    #a9a9a9 40%, 
-    #e8e8e8 60%, 
-    #c0c0c0 80%,
-    #e8e8e8 100%);
-  z-index: 3;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* 网格花纹背景 */
@@ -41,34 +22,10 @@
   width: 100%;
   height: 100%;
   background-image: 
-    linear-gradient(rgba(1, 117, 194, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(1, 117, 194, 0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
+    linear-gradient(rgba(36, 50, 64, 0.5) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(36, 50, 64, 0.5) 2px, transparent 2px);
+  background-size: 30px 30px; 
   z-index: 0;
-}
-
-/* 暗色模式适配 */
-html[data-theme='dark'] .heroBanner {
-  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
-  color: #e2e8f0;
-}
-
-/* 暗色模式网格 */
-html[data-theme='dark'] .heroBanner::before {
-  background-image: 
-    linear-gradient(rgba(2, 136, 209, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(2, 136, 209, 0.1) 1px, transparent 1px);
-}
-
-/* 暗色模式银质装饰线 */
-html[data-theme='dark'] .heroBanner::after {
-  background: linear-gradient(90deg, 
-    #666666 0%, 
-    #999999 20%, 
-    #777777 40%, 
-    #999999 60%, 
-    #666666 80%,
-    #999999 100%);
 }
 
 .heroBanner > div {
@@ -78,7 +35,7 @@ html[data-theme='dark'] .heroBanner::after {
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 3rem 1.5rem;
+    padding: 4rem 0;
   }
 }
 
@@ -86,7 +43,7 @@ html[data-theme='dark'] .heroBanner::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 2rem;
 }
 
@@ -136,10 +93,10 @@ html[data-theme='dark'] .buttonPrimary:hover {
 
 .buttonSecondary {
   background-color: transparent;
-  color: #5865F2;
-  border: 2px solid #5865F2;
-  border-radius: 8px;
-  padding: 0.7rem 1.8rem;
+  color: #0175C2;
+  border: 2px solid #0175C2;
+  border-radius: 4px;
+  padding: 0.8rem 2rem;
   font-weight: 500;
   transition: all 0.3s ease;
   display: flex;
@@ -153,7 +110,7 @@ html[data-theme='dark'] .buttonPrimary:hover {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235865F2'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230175C2'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -169,11 +126,11 @@ html[data-theme='dark'] .buttonSecondary::before {
 }
 
 .buttonSecondary:hover {
-  background-color: rgba(88, 101, 242, 0.1);
-  color: #4752c4;
-  border-color: #4752c4;
+  background-color: rgba(1, 117, 194, 0.1);
+  color: #0160a1;
+  border-color: #0160a1;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(88, 101, 242, 0.15);
+  box-shadow: 0 4px 12px rgba(1, 117, 194, 0.15);
 }
 
 html[data-theme='dark'] .buttonSecondary:hover {
@@ -184,24 +141,24 @@ html[data-theme='dark'] .buttonSecondary:hover {
 }
 
 .buttonDiscord {
-  background-color: #5865F2;
+  background-color: #0175C2;
   color: white;
   border: none;
-  border-radius: 8px;
-  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  padding: 0.85rem 2.2rem;
   font-weight: 500;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 14px rgba(88, 101, 242, 0.2);
+  box-shadow: 0 4px 14px rgba(1, 117, 194, 0.3);
 }
 
 .buttonDiscord:hover {
-  background-color: #4752c4;
+  background-color: #0160a1;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(88, 101, 242, 0.3);
+  box-shadow: 0 6px 20px rgba(1, 117, 194, 0.4);
 }
 
 .buttonDiscord::before {
@@ -215,9 +172,100 @@ html[data-theme='dark'] .buttonSecondary:hover {
   background-position: center;
 }
 
+/* 标题和Logo容器 */
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 头部Logo样式 */
+.headerLogo {
+  height: 75px;
+  width: auto;
+  margin-top: -5px;
+  filter: brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(2559%) hue-rotate(195deg) brightness(96%) contrast(101%); /* #01579b 深蓝色 */
+}
+
+.titleContainer h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+/* 天平图标样式 */
+.headerIcon {
+  height: 100px;
+  width: auto;
+  margin-right: 2rem;
+  vertical-align: middle;
+  display: inline-flex;
+  align-self: center;
+  min-width: 60px; /* 防止图标过度缩小 */
+  flex-shrink: 1; /* 允许图标在必要时缩小 */
+  filter: brightness(0) saturate(100%) invert(69%) sepia(55%) saturate(1808%) hue-rotate(165deg) brightness(102%) contrast(98%); /* #29b6f6 颜色 */
+}
+
+/* 放大的搜索框容器 */
+.searchContainer {
+  position: relative;
+  width: 95%;
+  max-width: 800px; 
+  margin: 0 auto 3rem;
+}
+
+.enlargedSearchInput {
+  width: 100%;
+  height: 70px; /* 降低搜索框高度 */
+  padding: 0 3rem 0 5rem;
+  font-size: 1.4rem;
+  background: #35404d; 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 45px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  color: #888888;
+}
+
+.enlargedSearchInput::placeholder {
+  color: #888888;
+  font-size: 1.4rem;
+}
+
+/* 搜索图标调整 */
+.searchContainer::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 2.5rem;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23888888'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* 社区介绍样式 */
+.communityDescription {
+  font-size: 1.4rem;
+  margin: 2.5rem auto 0;
+  max-width: 85%;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  text-align: center;
+}
+
 /* Instagram风格的搜索框 - 玻璃质感设计 */
 .searchContainer {
-  max-width: 600px;
+  max-width: 800px;
   margin: 2rem auto 0;
   position: relative;
 }
@@ -367,6 +415,7 @@ html[data-theme='dark'] .searchContainer::after {
 
 /* 高级玻璃质感渐变色圆球 */
 .simpleGradientBall {
+  display: none;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -406,19 +455,6 @@ html[data-theme='dark'] .searchContainer::after {
   opacity: 0.7;
   z-index: 2;
   pointer-events: none;
-}
-
-/* 暗色模式适配 */
-html[data-theme='dark'] .simpleGradientBall {
-  background: linear-gradient(135deg, 
-    rgba(88, 101, 242, 0.8) 0%, 
-    rgba(77, 171, 247, 0.7) 50%, 
-    rgba(0, 212, 255, 0.8) 100%
-  );
-  box-shadow: 
-    0 0 30px rgba(88, 101, 242, 0.6),
-    inset 0 0 15px rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* 横幅侧边装饰符号 - 玻璃质感设计 */
@@ -485,6 +521,7 @@ html[data-theme='dark'] .sideDecor:hover {
 
 /* Logo容器样式 */
 .logoContainer {
+  display: none;
   margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
@@ -509,7 +546,64 @@ html[data-theme='dark'] .logoTag {
 /* 响应式调整 */
 @media screen and (max-width: 996px) {
   .sideDecor {
-    display: none; /* 小屏幕隐藏 */
+    display: none; 
+  }
+}
+
+/* 核心价值观容器 */
+.coreValuesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2.5rem;
+  padding: 1rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* 核心价值观项目 */
+.coreValueItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.coreValueItem:hover {
+  transform: translateY(-5px);
+}
+
+/* 核心价值观图标 */
+.coreValueIcon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.5rem;
+  filter: brightness(0) saturate(100%) invert(69%) sepia(55%) saturate(1808%) hue-rotate(165deg) brightness(102%) contrast(98%); /* #29b6f6 颜色 */
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+/* 核心价值观文字 */
+.coreValueText {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+/* 响应式调整核心价值观 */
+@media screen and (max-width: 768px) {
+  .coreValuesContainer {
+    gap: 2rem;
+  }
+  
+  .coreValueIcon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .coreValueText {
+    font-size: 0.8rem;
   }
 }
 
@@ -701,4 +795,268 @@ html[data-theme='dark'] .logoImage {
 /* 暗色模式下保持温暖的渐变色 */
 html[data-theme='dark'] .medalFrame {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 淡金色文本 */
+.goldText {
+  color: #f0e6c9;
+  font-style: italic;
+  font-family: 'Playfair Display', 'Lora', 'Georgia', serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+  text-shadow: 0 0 10px rgba(240, 230, 201, 0.2);
+}
+
+/* 探索链接样式 */
+.exploreLink {
+  color: #29b6f6;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(41, 182, 246, 0.4);
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
+  margin-left: 5px;
+}
+
+.exploreLink:hover {
+  color: #4fc3f7;
+  border-bottom-color: #4fc3f7;
+  text-shadow: 0 0 10px rgba(41, 182, 246, 0.3);
+}
+
+/* Support by文本样式 */
+.supportText {
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.2rem;
+}
+
+/* 站点描述样式 */
+.siteDescription {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  margin-top: 0;
+}
+
+/* 优雅字体样式 */
+.elegantFont {
+  font-family: 'Playfair Display', 'Lora', 'Georgia', serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a.elegantFont:hover {
+  color: #29b6f6;
+  text-decoration: none;
+}
+
+/* 响应式布局优化 */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 0;
+  }
+  
+  .titleContainer {
+    transform: scale(0.85);
+    transform-origin: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .headerIcon {
+    margin-right: 0;
+    height: 80px;
+  }
+  
+  .enlargedSearchInput {
+    height: 70px;
+    font-size: 1.2rem;
+    padding: 0 2rem 0 4rem;
+  }
+  
+  .searchContainer::after {
+    width: 28px;
+    height: 28px;
+    left: 1.5rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .buttonDiscord, .buttonSecondary {
+    width: 80%;
+    justify-content: center;
+  }
+}
+
+/* 超宽屏媒体查询 */
+@media screen and (min-width: 1600px) {
+  .searchContainer {
+    width: 98%;
+    max-width: 1800px;
+  }
+  
+  .enlargedSearchInput {
+    height: 100px; /* 更高的搜索框 */
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .searchContainer {
+    width: 1900px; /* 固定宽度，确保足够长 */
+  }
+}
+
+/* 精确匹配pub.dev的主色调 */
+:root {
+  --primary-color: #0175C2; 
+  --hover-color: #0160a1; 
+  --secondary-color: #f3f3f3; 
+}
+
+/* 搜索框颜色和样式优化 */
+.enlargedSearchInput {
+  width: 100%;
+  height: 70px;
+  padding: 0 3rem 0 5rem;
+  font-size: 1.4rem;
+  background: #35404d; 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 45px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  color: #888888;
+}
+
+.enlargedSearchInput:focus {
+  background: #35404d;
+  outline: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--primary-color);
+}
+
+/* 搜索图标颜色优化 */
+.searchContainer::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 2.5rem;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23888888'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* 更新按钮样式 */
+.buttonDiscord {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.85rem 2.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px rgba(1, 117, 194, 0.3);
+}
+
+.buttonDiscord:hover {
+  background-color: var(--hover-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(1, 117, 194, 0.4);
+}
+
+.buttonSecondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 0.8rem 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.buttonSecondary:hover {
+  background-color: rgba(1, 117, 194, 0.1);
+  color: var(--hover-color);
+  border-color: var(--hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(1, 117, 194, 0.15);
+}
+
+/* 响应式布局优化 */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 0;
+  }
+  
+  .titleContainer {
+    transform: scale(0.85);
+    transform-origin: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .headerIcon {
+    margin-right: 0;
+    height: 80px;
+  }
+  
+  .enlargedSearchInput {
+    height: 70px;
+    font-size: 1.2rem;
+    padding: 0 2rem 0 4rem;
+  }
+  
+  .searchContainer::after {
+    width: 28px;
+    height: 28px;
+    left: 1.5rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .buttonDiscord, .buttonSecondary {
+    width: 80%;
+    justify-content: center;
+  }
+}
+
+/* 暗色模式适配 */
+html[data-theme='dark'] .simpleGradientBall {
+  background: linear-gradient(135deg, 
+    rgba(88, 101, 242, 0.8) 0%, 
+    rgba(77, 171, 247, 0.7) 50%, 
+    rgba(0, 212, 255, 0.8) 100%
+  );
+  box-shadow: 
+    0 0 30px rgba(88, 101, 242, 0.6),
+    inset 0 0 15px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }

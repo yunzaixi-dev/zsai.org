@@ -15,6 +15,7 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-navbar-item-color: white;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -253,4 +254,94 @@ html[data-theme='dark'] .navbar-github-link::before {
 .navbar-github-link {
   display: flex;
   align-items: center;
+}
+
+/* 统一导航栏样式 - 在亮暗模式下保持一致 */
+.navbar {
+  background-color: #1c2834;
+}
+
+/* 确保导航栏文本在深色背景上可见 */
+.navbar__title,
+.navbar__link,
+.navbar__toggle,
+.navbar-sidebar__brand {
+  color: white;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: #29B6F6;
+}
+
+/* 适配暗色模式 */
+html[data-theme='dark'] .navbar {
+  background-color: #1c2834; /* 保持与亮色模式一样的颜色 */
+}
+
+html[data-theme='dark'] .navbar__title,
+html[data-theme='dark'] .navbar__link,
+html[data-theme='dark'] .navbar__toggle,
+html[data-theme='dark'] .navbar-sidebar__brand {
+  color: white;
+}
+
+html[data-theme='dark'] .navbar__link:hover,
+html[data-theme='dark'] .navbar__link--active {
+  color: #29B6F6;
+}
+
+/* 导航栏底部边框 */
+.navbar::after {
+  display: none;
+}
+
+/* 主题切换按钮样式 */
+.navbar__item.navbar__link,
+.navbar__title,
+.navbar-sidebar__brand {
+  color: white;
+}
+
+.navbar__toggle {
+  color: white;
+}
+
+.clean-btn.navbar-sidebar__close {
+  color: white;
+}
+
+/* 强制颜色模式切换按钮为浅色 */
+.navbar div[class*="toggle_"] {
+  color: white !important;
+}
+
+.navbar button[class*="toggleButton_"] {
+  color: white !important;
+}
+
+.navbar svg[class*="lightToggleIcon_"],
+.navbar svg[class*="darkToggleIcon_"],
+.ColorModeToggle__lightToggleIcon,
+.ColorModeToggle__darkToggleIcon {
+  color: white !important;
+  fill: white !important;
+}
+
+.colorModeToggle {
+  opacity: 0.9;
+}
+
+/* 更强制的选择器以覆盖任何可能的Docusaurus更新 */
+html[data-theme='dark'] .navbar button[class*="toggleButton_"],
+html[data-theme='light'] .navbar button[class*="toggleButton_"] {
+  color: white !important;
+}
+
+html[data-theme='dark'] .navbar svg[class*="lightToggleIcon_"],
+html[data-theme='dark'] .navbar svg[class*="darkToggleIcon_"],
+html[data-theme='light'] .navbar svg[class*="lightToggleIcon_"],
+html[data-theme='light'] .navbar svg[class*="darkToggleIcon_"] {
+  color: white !important;
+  fill: white !important;
 }

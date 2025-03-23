@@ -13,42 +13,41 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
-        {/* 中心渐变色圆球 */}
-        <div className={styles.logoContainer}>
-          <div className={styles.logoTag} style={{marginRight: "15px"}}>&lt;/</div>
-          <div className={styles.simpleGradientBall}></div>
-          <div className={styles.logoTag} style={{marginLeft: "15px"}}>/&gt;</div>
+        {/* 标题栏和天平图标 */}
+        <div className={styles.titleContainer}>
+          <img src="/img/logo.png" alt="智识ΑIEΣΣΥΔΟ Logo" className={styles.headerLogo} />
+          <Heading as="h1" className="hero__title">
+            {siteConfig.title}
+          </Heading>
         </div>
         
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        
-        {/* pub.dev 风格的搜索框 */}
+        {/* 加长的圆角搜索框 */}
         <div className={styles.searchContainer}>
           <input
             type="text"
-            className={styles.searchInput}
+            className={styles.enlargedSearchInput}
             placeholder="搜索文档、教程和资源..."
             aria-label="搜索"
           />
         </div>
         
-        <div className={styles.buttons}>
-          <Link
-            className={clsx('button', styles.buttonDiscord)}
-            to="https://discord.gg/DaePbQXhnH"
-            target="_blank"
-            rel="noopener noreferrer">
-            加入Discord
-          </Link>
-          <Link
-            className={clsx('button', styles.buttonSecondary)}
-            to="/docs/intro">
+        {/* 社区介绍 */}
+        <p className={styles.communityDescription}>
+          智识ΑIEΣΣΥΔΟ社区的开源教程仓库，
+          <Link to="/docs/intro" className={styles.exploreLink}>
             开始探索
           </Link>
-        </div>
+        </p>
+        
+        {/* 添加网站标语 */}
+        <p className={styles.supportText}>
+          <Link to="https://zaixi.dev" className={styles.elegantFont}>powered by yunzaixi-dev</Link>
+        </p>
+        
+        {/* 添加站点描述 */}
+        <p className={styles.siteDescription}>
+          <em className={styles.goldText}>这个新社区的名字，就叫做智识ΑIEΣΣΥΔΟ吧 ---- 2025.2.20</em>
+        </p>
       </div>
     </header>
   );

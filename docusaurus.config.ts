@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: '智识ΑIEΣΣΥΔΟ',
-  tagline: '简单，纯粹的开源社区',
+  tagline: 'Support by 智识ΑIEΣΣΥΔΟ',
   favicon: 'img/logo.ico',
 
   // Set the production url of your site here
@@ -97,9 +97,9 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: '教程',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/blog', label: '博客', position: 'left'},
         {
           href: 'https://discord.gg/DaePbQXhnH',
           label: 'Discord',
