@@ -13,6 +13,25 @@
   position: relative;
 }
 
+/* 银质装饰线 */
+.heroBanner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, 
+    #c0c0c0 0%, 
+    #e8e8e8 20%, 
+    #a9a9a9 40%, 
+    #e8e8e8 60%, 
+    #c0c0c0 80%,
+    #e8e8e8 100%);
+  z-index: 3;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
 /* 网格花纹背景 */
 .heroBanner::before {
   content: '';
@@ -39,6 +58,17 @@ html[data-theme='dark'] .heroBanner::before {
   background-image: 
     linear-gradient(rgba(2, 136, 209, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(2, 136, 209, 0.1) 1px, transparent 1px);
+}
+
+/* 暗色模式银质装饰线 */
+html[data-theme='dark'] .heroBanner::after {
+  background: linear-gradient(90deg, 
+    #666666 0%, 
+    #999999 20%, 
+    #777777 40%, 
+    #999999 60%, 
+    #666666 80%,
+    #999999 100%);
 }
 
 .heroBanner > div {
