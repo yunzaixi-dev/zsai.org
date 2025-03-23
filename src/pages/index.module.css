@@ -215,129 +215,7 @@ html[data-theme='dark'] .buttonSecondary:hover {
   background-position: center;
 }
 
-/* Logo容器样式 */
-.logoContainer {
-  margin-bottom: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 标签装饰元素 */
-.logoTag {
-  font-family: 'Consolas', 'Monaco', monospace;
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: #5865F2;
-  opacity: 0.8;
-  text-shadow: 0 2px 4px rgba(88, 101, 242, 0.2);
-  transition: all 0.3s ease;
-}
-
-html[data-theme='dark'] .logoTag {
-  color: #7984F5;
-  text-shadow: 0 2px 4px rgba(121, 132, 245, 0.3);
-}
-
-.logoContainer:hover .logoTag {
-  transform: scale(1.1);
-  opacity: 1;
-  color: #4752c4;
-}
-
-/* Instagram风格渐变圆环框架 */
-.medalFrame {
-  position: relative;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  /* 显著增加内边距使圆环更粗 */
-  padding: 10px;
-  /* 更温暖亲切的渐变色调 */
-  background: linear-gradient(45deg, 
-    #ffdc80 0%, /* 暖黄色 */
-    #fcaf45 15%, /* 温暖橙色 */
-    #f77737 30%, /* 柔和橙红 */
-    #f56040 45%, /* 温和红色 */
-    #fd1d1d 60%, /* 明亮红色 */
-    #e1306c 75%, /* 柔和粉红 */
-    #c13584 90%, /* 温暖紫色 */
-    #833ab4 100% /* 柔和紫色 */
-  );
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-style: preserve-3d;
-  transition: all 0.3s ease;
-}
-
-/* 内部容器 */
-.logo {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  position: relative;
-  z-index: 3;
-  transition: all 0.3s ease;
-  border: none;
-  background-color: white;
-  /* 保留原logo色彩 */
-  filter: none;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-}
-
-/* 悬停效果 */
-.medalFrame:hover {
-  transform: scale(1.03);
-  /* 悬停时让色彩更加温暖亲切 */
-  background: linear-gradient(45deg, 
-    #ffdc80 0%, 
-    #fcaf45 15%, 
-    #f77737 30%, 
-    #f56040 45%, 
-    #fd1d1d 60%, 
-    #e1306c 75%, 
-    #c13584 90%, 
-    #833ab4 100%
-  );
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.medalFrame:hover .logo {
-  transform: scale(0.98);
-}
-
-/* 光泽效果 - 温暖的光泽 */
-.medalFrame::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 50%;
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.3) 0%, 
-    rgba(255, 255, 255, 0) 50%, 
-    rgba(255, 255, 255, 0.15) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* 暗色模式适配 */
-html[data-theme='dark'] .logo {
-  background-color: #121212;
-}
-
-/* 暗色模式下保持温暖的渐变色 */
-html[data-theme='dark'] .medalFrame {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* pub.dev 风格的搜索框 */
+/* Instagram风格的搜索框 */
 .searchContainer {
   max-width: 600px;
   margin: 2rem auto 0;
@@ -395,6 +273,133 @@ html[data-theme='dark'] .searchContainer::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2329B6F6'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
 }
 
+/* Instagram风格渐变圆环框架 */
+.medalFrame {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 10px;
+  background: linear-gradient(45deg, 
+    #ffdc80 0%, 
+    #fcaf45 15%, 
+    #f77737 30%, 
+    #f56040 45%, 
+    #fd1d1d 60%, 
+    #e1306c 75%, 
+    #c13584 90%, 
+    #833ab4 100%
+  );
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+/* 内部容器 */
+.logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+  border: none;
+  background-color: white;
+  filter: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 光泽效果 - 温暖的光泽 */
+.medalFrame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.3) 0%, 
+    rgba(255, 255, 255, 0) 50%, 
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* 暗色模式适配 */
+html[data-theme='dark'] .logo {
+  background-color: #121212;
+}
+
+/* 暗色模式下保持温暖的渐变色 */
+html[data-theme='dark'] .medalFrame {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo容器样式 */
+.logoContainer {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 标签装饰元素 */
+.logoTag {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #5865F2;
+  opacity: 0.9;
+  text-shadow: 0 2px 4px rgba(88, 101, 242, 0.2);
+}
+
+html[data-theme='dark'] .logoTag {
+  color: #7984F5;
+  text-shadow: 0 2px 4px rgba(121, 132, 245, 0.3);
+}
+
+/* 横幅侧边装饰符号 */
+.sideDecor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transform: translateY(-50%);
+  z-index: 2;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.sideDecor span {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5865F2;
+  text-shadow: 0 1px 3px rgba(88, 101, 242, 0.2);
+}
+
+.sideDecor:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* 暗色模式适配 */
+html[data-theme='dark'] .sideDecor span {
+  color: #7984F5;
+  text-shadow: 0 1px 3px rgba(121, 132, 245, 0.3);
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 996px) {
+  .sideDecor {
+    display: none; /* 小屏幕隐藏 */
+  }
+}
+
 /* 抽象logo设计 */
 .abstractLogo {
   width: 100%;
@@ -417,6 +422,7 @@ html[data-theme='dark'] .searchContainer::after {
   position: absolute;
   z-index: 2;
   box-shadow: 0 0 15px rgba(79, 91, 213, 0.4);
+  opacity: 0.9;
 }
 
 /* 抽象元素1 - 代表天平（平等） */
@@ -461,7 +467,7 @@ html[data-theme='dark'] .searchContainer::after {
   border-radius: 50%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 
@@ -522,26 +528,6 @@ html[data-theme='dark'] .searchContainer::after {
   transform: translateY(-50%);
 }
 
-/* 动画效果 */
-@keyframes rotate {
-  from { transform: translate(-50%, -50%) rotate(0); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-@keyframes pulse {
-  0% { opacity: 0.5; transform: scale(0.95); }
-  50% { opacity: 1; transform: scale(1.05); }
-  100% { opacity: 0.5; transform: scale(0.95); }
-}
-
-.abstractElement2 {
-  animation: rotate 20s infinite linear;
-}
-
-.abstractCircle {
-  animation: pulse 3s infinite ease-in-out;
-}
-
 /* 暗色模式适配 */
 html[data-theme='dark'] .abstractLogo {
   background-color: #121212;
@@ -574,42 +560,4 @@ html[data-theme='dark'] .abstractElement3::after,
 html[data-theme='dark'] .abstractElement3 span:nth-child(1),
 html[data-theme='dark'] .abstractElement3 span:nth-child(2) {
   background: #5151e5;
-}
-
-/* 横幅侧边装饰符号 */
-.sideDecor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  transform: translateY(-50%);
-  z-index: 2;
-  opacity: 0.6;
-  transition: all 0.3s ease;
-}
-
-.sideDecor span {
-  font-family: 'Consolas', 'Monaco', monospace;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #5865F2;
-  text-shadow: 0 1px 3px rgba(88, 101, 242, 0.2);
-}
-
-.sideDecor:hover {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.1);
-}
-
-/* 暗色模式适配 */
-html[data-theme='dark'] .sideDecor span {
-  color: #7984F5;
-  text-shadow: 0 1px 3px rgba(121, 132, 245, 0.3);
-}
-
-/* 响应式调整 */
-@media screen and (max-width: 996px) {
-  .sideDecor {
-    display: none; /* 小屏幕隐藏 */
-  }
 }
