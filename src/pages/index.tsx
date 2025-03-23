@@ -17,6 +17,17 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        
+        {/* pub.dev 风格的搜索框 */}
+        <div className={styles.searchContainer}>
+          <input
+            type="text"
+            className={styles.searchInput}
+            placeholder="搜索文档、教程和资源..."
+            aria-label="搜索"
+          />
+        </div>
+        
         <div className={styles.buttons}>
           <Link
             className={clsx('button', styles.buttonPrimary)}

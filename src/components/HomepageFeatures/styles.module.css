@@ -7,6 +7,11 @@
   position: relative;
 }
 
+/* 暗色模式适配 */
+html[data-theme='dark'] .features {
+  background-color: #171E2E;
+}
+
 .features::before {
   content: '';
   position: absolute;
@@ -14,19 +19,27 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(58, 110, 165, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(1, 117, 194, 0.2), transparent);
+}
+
+html[data-theme='dark'] .features::before {
+  background: linear-gradient(90deg, transparent, rgba(2, 136, 209, 0.2), transparent);
 }
 
 .featureSvg {
   height: 160px;
   width: 160px;
-  fill: #3a6ea5;
+  fill: #0175C2;
   margin-bottom: 1.5rem;
   transition: transform 0.3s ease;
 }
 
+html[data-theme='dark'] .featureSvg {
+  fill: #29B6F6;
+}
+
 .featureCard {
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 12px;
   background-color: #ffffff;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
@@ -35,26 +48,60 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+html[data-theme='dark'] .featureCard {
+  background-color: #1E293B;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .featureCard:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(58, 110, 165, 0.08);
+  box-shadow: 0 12px 40px rgba(1, 117, 194, 0.08);
+}
+
+html[data-theme='dark'] .featureCard:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .featureCard:hover .featureSvg {
   transform: scale(1.05);
 }
 
+/* pub.dev 风格卡片顶部装饰 */
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0175C2, #02569B);
+}
+
+html[data-theme='dark'] .featureCard::before {
+  background: linear-gradient(90deg, #0288D1, #29B6F6);
+}
+
 .featureTitle {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #2a4b8d;
+  color: #0175C2;
   margin-bottom: 1rem;
 }
 
+html[data-theme='dark'] .featureTitle {
+  color: #29B6F6;
+}
+
 .featureDescription {
-  color: #546e8f;
+  color: #334155;
   line-height: 1.6;
   text-align: center;
+}
+
+html[data-theme='dark'] .featureDescription {
+  color: #CBD5E1;
 }

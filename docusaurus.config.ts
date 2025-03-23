@@ -72,6 +72,20 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
+    },
+    announcementBar: {
+      id: 'support_us',
+      content:
+        '智识ΑIEΣΣΥΔΟ - 平等、开放、共享的开源社区 💙',
+      backgroundColor: '#0175C2',
+      textColor: '#ffffff',
+      isCloseable: true,
+    },
     navbar: {
       title: '智识ΑIEΣΣΥΔΟ',
       logo: {
