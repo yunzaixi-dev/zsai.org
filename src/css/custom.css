@@ -6,13 +6,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #4a6da7;
+  --ifm-color-primary-dark: #425f95;
+  --ifm-color-primary-darker: #3e5a8d;
+  --ifm-color-primary-darkest: #334a74;
+  --ifm-color-primary-light: #5278b3;
+  --ifm-color-primary-lighter: #5c80b8;
+  --ifm-color-primary-lightest: #7696c6;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-navbar-item-color: white; /* 淡金色 */
@@ -20,13 +20,13 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #5d8aba;
+  --ifm-color-primary-dark: #4c7cae;
+  --ifm-color-primary-darker: #4675a6;
+  --ifm-color-primary-darkest: #3a6189;
+  --ifm-color-primary-light: #6e97c2;
+  --ifm-color-primary-lighter: #7ba0c7;
+  --ifm-color-primary-lightest: #97b4d5;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -410,4 +410,138 @@ html[data-theme='dark'] .navbar {
 html[data-theme='dark'] .navbar__link:hover,
 html[data-theme='dark'] .navbar__link--active {
   color: #f0e6c9;
+}
+
+/* Markdown样式 */
+
+/* Markdown标题样式 */
+.markdown h1 {
+  color: #4a6da7;
+  border-bottom: 2px solid #ccd9ef;
+  padding-bottom: 0.3em;
+}
+
+.markdown h2 {
+  color: #4a6da7;
+  border-bottom: 1px solid #dae2f3;
+  padding-bottom: 0.2em;
+}
+
+.markdown h3, 
+.markdown h4, 
+.markdown h5, 
+.markdown h6 {
+  color: #4a6da7;
+}
+
+/* 暗色模式下的标题颜色 */
+html[data-theme='dark'] .markdown h1,
+html[data-theme='dark'] .markdown h2,
+html[data-theme='dark'] .markdown h3,
+html[data-theme='dark'] .markdown h4,
+html[data-theme='dark'] .markdown h5,
+html[data-theme='dark'] .markdown h6 {
+  color: #97b4d5;
+}
+
+html[data-theme='dark'] .markdown h1 {
+  border-bottom: 2px solid #4675a6;
+}
+
+html[data-theme='dark'] .markdown h2 {
+  border-bottom: 1px solid #4675a6;
+}
+
+/* Markdown卡片样式 */
+.admonition {
+  border-radius: 8px;
+  border-left: 6px solid #4a6da7;
+  box-shadow: 0 2px 8px rgba(74, 109, 167, 0.15);
+}
+
+.admonition-note {
+  background-color: rgba(74, 109, 167, 0.1);
+}
+
+.admonition-tip {
+  border-left-color: #5278b3;
+  background-color: rgba(82, 120, 179, 0.1);
+}
+
+.admonition-info {
+  border-left-color: #7696c6;
+  background-color: rgba(118, 150, 198, 0.1);
+}
+
+.admonition-caution {
+  border-left-color: #3e5a8d;
+  background-color: rgba(62, 90, 141, 0.1);
+}
+
+.admonition-danger {
+  border-left-color: #334a74;
+  background-color: rgba(51, 74, 116, 0.1);
+}
+
+/* 暗色模式下的卡片样式 */
+html[data-theme='dark'] .admonition {
+  border-left: 6px solid #5d8aba;
+  box-shadow: 0 2px 8px rgba(93, 138, 186, 0.2);
+}
+
+html[data-theme='dark'] .admonition-note {
+  background-color: rgba(93, 138, 186, 0.15);
+}
+
+html[data-theme='dark'] .admonition-tip {
+  border-left-color: #6e97c2;
+  background-color: rgba(110, 151, 194, 0.15);
+}
+
+html[data-theme='dark'] .admonition-info {
+  border-left-color: #97b4d5;
+  background-color: rgba(151, 180, 213, 0.15);
+}
+
+html[data-theme='dark'] .admonition-caution {
+  border-left-color: #4675a6;
+  background-color: rgba(70, 117, 166, 0.15);
+}
+
+html[data-theme='dark'] .admonition-danger {
+  border-left-color: #3a6189;
+  background-color: rgba(58, 97, 137, 0.15);
+}
+
+/* 链接样式 */
+.markdown a {
+  color: #5278b3;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.markdown a:hover {
+  color: #7696c6;
+  text-decoration: underline;
+}
+
+html[data-theme='dark'] .markdown a {
+  color: #6e97c2;
+}
+
+html[data-theme='dark'] .markdown a:hover {
+  color: #97b4d5;
+}
+
+/* 代码块和内联代码 */
+.markdown code {
+  background-color: rgba(74, 109, 167, 0.1);
+  color: #4a6da7;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+html[data-theme='dark'] .markdown code {
+  background-color: rgba(93, 138, 186, 0.15);
+  color: #7ba0c7;
 }
