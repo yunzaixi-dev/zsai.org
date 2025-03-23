@@ -15,6 +15,7 @@ function HomepageHeader() {
       <div className="container">
         {/* 抽象图形设计 - 象征平等、开放和共享 */}
         <div className={styles.logoContainer}>
+          <div className={styles.logoTag} style={{marginRight: "15px"}}>&lt;/</div>
           <div className={styles.medalFrame}>
             <div className={styles.abstractLogo}>
               <div className={styles.abstractCircle}></div>
@@ -26,6 +27,7 @@ function HomepageHeader() {
               </div>
             </div>
           </div>
+          <div className={styles.logoTag} style={{marginLeft: "15px"}}>/&gt;</div>
         </div>
         
         <Heading as="h1" className="hero__title">

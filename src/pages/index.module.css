@@ -223,6 +223,28 @@ html[data-theme='dark'] .buttonSecondary:hover {
   align-items: center;
 }
 
+/* 标签装饰元素 */
+.logoTag {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #5865F2;
+  opacity: 0.8;
+  text-shadow: 0 2px 4px rgba(88, 101, 242, 0.2);
+  transition: all 0.3s ease;
+}
+
+html[data-theme='dark'] .logoTag {
+  color: #7984F5;
+  text-shadow: 0 2px 4px rgba(121, 132, 245, 0.3);
+}
+
+.logoContainer:hover .logoTag {
+  transform: scale(1.1);
+  opacity: 1;
+  color: #4752c4;
+}
+
 /* Instagram风格渐变圆环框架 */
 .medalFrame {
   position: relative;
