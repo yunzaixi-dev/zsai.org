@@ -310,7 +310,7 @@ html[data-theme='dark'] .navbar-github-link::before {
 /* 导航栏链接悬停和激活状态 */
 .navbar .navbar__link:hover,
 .navbar .navbar__link--active {
-  color: #29B6F6 !important;
+  color: #f0e6c9 !important; /* 淡金色 */
 }
 
 /* 导航栏下拉菜单 */
@@ -399,7 +399,7 @@ html[data-theme='light'] .navbar svg[class*="darkToggleIcon_"] {
 /* 导航栏相关样式 */
 .navbar__link:hover,
 .navbar__link--active {
-  color: #29B6F6;
+  color: #f0e6c9;
 }
 
 /* 适配暗色模式 */
@@ -409,5 +409,5 @@ html[data-theme='dark'] .navbar {
 
 html[data-theme='dark'] .navbar__link:hover,
 html[data-theme='dark'] .navbar__link--active {
-  color: #29B6F6;
+  color: #f0e6c9;
 }
