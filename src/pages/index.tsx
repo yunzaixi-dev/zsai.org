@@ -13,6 +13,15 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
+        {/* 添加Logo到标题上方 */}
+        <div className={styles.logoContainer}>
+          <img 
+            src="/img/logo.png" 
+            alt="智识ΑIEΣΣΥΔΟ Logo" 
+            className={styles.logo}
+          />
+        </div>
+        
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>

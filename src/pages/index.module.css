@@ -115,6 +115,35 @@ html[data-theme='dark'] .buttonSecondary:hover {
   border-color: #29B6F6;
 }
 
+/* Logo样式 */
+.logoContainer {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 120px;
+  width: auto;
+  filter: drop-shadow(0 4px 10px rgba(1, 117, 194, 0.2));
+  transition: all 0.3s ease;
+  border-radius: 60px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  box-shadow: 0 8px 30px rgba(1, 117, 194, 0.1);
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(1, 117, 194, 0.15);
+}
+
+html[data-theme='dark'] .logo {
+  filter: drop-shadow(0 4px 10px rgba(2, 136, 209, 0.3));
+  background: rgba(30, 41, 59, 0.5);
+}
+
 /* pub.dev 风格的搜索框 */
 .searchContainer {
   max-width: 600px;
