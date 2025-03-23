@@ -1,11 +1,60 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 5rem 0;
   width: 100%;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(58, 110, 165, 0.2), transparent);
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 160px;
+  width: 160px;
+  fill: #3a6ea5;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.featureCard {
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(58, 110, 165, 0.08);
+}
+
+.featureCard:hover .featureSvg {
+  transform: scale(1.05);
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2a4b8d;
+  margin-bottom: 1rem;
+}
+
+.featureDescription {
+  color: #546e8f;
+  line-height: 1.6;
+  text-align: center;
 }

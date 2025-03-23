@@ -4,15 +4,17 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 6rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4f0fc 100%);
+  color: #2a4b8d;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 3rem 1.5rem;
   }
 }
 
@@ -20,4 +22,39 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
+}
+
+.buttonPrimary {
+  background-color: #3a6ea5;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(58, 110, 165, 0.2);
+}
+
+.buttonPrimary:hover {
+  background-color: #2a4b8d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(42, 75, 141, 0.25);
+}
+
+.buttonSecondary {
+  background-color: transparent;
+  color: #3a6ea5;
+  border: 2px solid #3a6ea5;
+  border-radius: 30px;
+  padding: 0.7rem 1.8rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  transition: all 0.3s ease;
+}
+
+.buttonSecondary:hover {
+  background-color: rgba(58, 110, 165, 0.1);
+  color: #2a4b8d;
+  border-color: #2a4b8d;
 }
