@@ -198,6 +198,40 @@ html[data-theme='dark'] .buttonSecondary:hover {
   top: -3px;
 }
 
+/* 移动端屏幕下的标题和Logo适配 */
+@media screen and (max-width: 768px) {
+  .titleContainer {
+    gap: 0.8rem;
+  }
+  
+  .headerLogo {
+    height: 45px;
+    margin-bottom: 2px;
+  }
+  
+  .titleContainer h1 {
+    font-size: 1.8rem;
+    white-space: nowrap;
+  }
+}
+
+/* 更小屏幕的额外优化 */
+@media screen and (max-width: 480px) {
+  .titleContainer {
+    gap: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .headerLogo {
+    height: 40px;
+    margin-bottom: 1px;
+  }
+  
+  .titleContainer h1 {
+    font-size: 1.6rem;
+  }
+}
+
 /* 天平图标样式 */
 .headerIcon {
   height: 100px;
