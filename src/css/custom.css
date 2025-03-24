@@ -402,6 +402,28 @@ html[data-theme='light'] .navbar svg[class*="darkToggleIcon_"] {
   color: #f0e6c9;
 }
 
+/* 导航栏统一样式 - 同时适用于亮色与暗色模式 */
+.navbar {
+  background-color: #1c2834;
+}
+
+/* 移动端导航栏样式 */
+.navbar-sidebar {
+  background-color: #1c2834;
+}
+
+.navbar-sidebar__brand {
+  background-color: #1c2834;
+}
+
+.navbar-sidebar__backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-sidebar__close {
+  color: white;
+}
+
 /* 适配暗色模式 */
 html[data-theme='dark'] .navbar {
   background-color: #1c2834; /* 保持与亮色模式一样的颜色 */
