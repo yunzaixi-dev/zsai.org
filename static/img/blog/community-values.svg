@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+  <rect width="800" height="300" fill="#12202f" />
+  <!-- 网格背景 -->
+  <path d="M0,0 L800,0 L800,300 L0,300 Z" fill="#12202f" stroke="none" />
+  <path d="M0,30 L800,30 M0,60 L800,60 M0,90 L800,90 M0,120 L800,120 M0,150 L800,150 M0,180 L800,180 M0,210 L800,210 M0,240 L800,240 M0,270 L800,270" stroke="#243240" stroke-width="2" />
+  <path d="M30,0 L30,300 M60,0 L60,300 M90,0 L90,300 M120,0 L120,300 M150,0 L150,300 M180,0 L180,300 M210,0 L210,300 M240,0 L240,300 M270,0 L270,300 M300,0 L300,300 M330,0 L330,300 M360,0 L360,300 M390,0 L390,300 M420,0 L420,300 M450,0 L450,300 M480,0 L480,300 M510,0 L510,300 M540,0 L540,300 M570,0 L570,300 M600,0 L600,300 M630,0 L630,300 M660,0 L660,300 M690,0 L690,300 M720,0 L720,300 M750,0 L750,300 M780,0 L780,300" stroke="#243240" stroke-width="2" />
+  
+  <!-- 标题 -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="white">智识ΑIEΣΣΥΔΟ社区价值观</text>
+  
+  <!-- 三个核心价值观 -->
+  <g transform="translate(150, 150)">
+    <!-- 平等 - 天平 -->
+    <circle cx="0" cy="0" r="60" fill="#1b2a3a" stroke="#4a6da7" stroke-width="2" />
+    <text x="0" y="-25" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">平等</text>
+    <path d="M-30,10 L30,10 M-30,10 L-40,30 L-20,30 Z M30,10 L40,30 L20,30 Z M0,-20 L0,10 M-5,-15 L5,-15" stroke="#4a6da7" stroke-width="3" fill="none" />
+    <rect x="-40" y="30" width="20" height="5" fill="#4a6da7" />
+    <rect x="20" y="30" width="20" height="5" fill="#4a6da7" />
+    <text x="0" y="55" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#aec2e0">如同天平两端的平衡</text>
+  </g>
+  
+  <g transform="translate(400, 150)">
+    <!-- 开放 - 敞开的门 -->
+    <circle cx="0" cy="0" r="60" fill="#1b2a3a" stroke="#4a6da7" stroke-width="2" />
+    <text x="0" y="-25" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">开放</text>
+    <path d="M-20,-10 L-20,30 L20,30 L20,-10 M-15,-10 L-15,25 M-20,30 L-30,30 L-30,-15 L20,-15 L20,-10" stroke="#4a6da7" stroke-width="3" fill="none" />
+    <circle cx="15" cy="10" r="3" fill="#4a6da7" />
+    <text x="0" y="55" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#aec2e0">如同敞开的大门</text>
+  </g>
+  
+  <g transform="translate(650, 150)">
+    <!-- 共享 - 连接的节点 -->
+    <circle cx="0" cy="0" r="60" fill="#1b2a3a" stroke="#4a6da7" stroke-width="2" />
+    <text x="0" y="-25" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">共享</text>
+    <circle cx="-20" cy="0" r="7" fill="#4a6da7" />
+    <circle cx="20" cy="0" r="7" fill="#4a6da7" />
+    <circle cx="0" cy="-20" r="7" fill="#4a6da7" />
+    <circle cx="0" cy="20" r="7" fill="#4a6da7" />
+    <path d="M-20,0 L20,0 M0,-20 L0,20 M-20,0 L0,-20 M-20,0 L0,20 M20,0 L0,-20 M20,0 L0,20" stroke="#4a6da7" stroke-width="2" />
+    <text x="0" y="55" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#aec2e0">如同连接的节点</text>
+  </g>
+  
+  <!-- 底部签名 -->
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#aec2e0">简单，纯粹的开源社区 - 2025.3.24</text>
+</svg>

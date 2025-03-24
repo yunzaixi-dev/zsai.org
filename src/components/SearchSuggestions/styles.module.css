@@ -1,0 +1,46 @@
+.suggestionsContainer {
+  position: absolute;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 2px;
+  background-color: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.suggestionsWrapper {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.suggestionItem {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.suggestionItem:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.suggestionLink {
+  display: block;
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+}
+
+.suggestionTitle {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--ifm-color-primary);
+}
+
+.suggestionContent {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

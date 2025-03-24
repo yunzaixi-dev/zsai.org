@@ -163,6 +163,10 @@
   },
   "active": "8d577795c8431557",
   "lastOpenFiles": [
+    "static/img/blog/community-values.svg",
+    "static/img/blog",
+    "blog/authors.yml",
+    "blog/2025-03-24-welcome-to-zs.md",
     "docs/万卷书/云原生/云原生简介.md",
     "docs/万卷书/云原生/_category_.json",
     "docs/万卷书/AIGC/AIGC简介.md",
@@ -177,10 +181,8 @@
     "docs/万里路/img",
     "docs/万里路/manage-docs-versions.md",
     "docs/万里路/_category_.json",
-    "docs/万里路",
     "docs/岁月史书/野史.md",
     "docs/岁月史书/正史.md",
-    "docs/岁月史书/img",
     "docs/深度求索/简介.md",
     "docs/不务正业/简介.md",
     "docs/边缘/简介.md",
@@ -201,7 +203,6 @@
     "docs/万卷书/create-a-document.md",
     "docs/万卷书/create-a-blog-post.md",
     "docs/万卷书/congratulations.md",
-    "docs/引言.md",
     "docs/行万里路/img/localeDropdown.png",
     "docs/行万里路/img/docsVersionDropdown.png"
   ]

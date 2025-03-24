@@ -5,8 +5,10 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import { useHistory } from '@docusaurus/router';
+import SearchSuggestions from '@site/src/components/SearchSuggestions';
+import { getSearchSuggestions, SearchResult } from '@site/src/utils/searchApi';
 
 import styles from './index.module.css';
 
@@ -15,6 +17,10 @@ function HomepageHeader() {
   const searchInputRef = useRef<HTMLInputElement>(null);
   const history = useHistory();
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchSuggestions, setSearchSuggestions] = useState<SearchResult[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
   
   // 处理搜索提交
   const handleSearchSubmit = (event: React.FormEvent) => {
@@ -24,19 +30,79 @@ function HomepageHeader() {
     
     // 跳转到搜索结果页
     history.push(`/search?q=${encodeURIComponent(query)}`);
+    setShowSuggestions(false);
   };
   
   // 处理输入更改
   const handleSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value);
+    const value = event.target.value;
+    setSearchQuery(value);
+    
+    if (value.trim().length >= 2) {
+      setShowSuggestions(true);
+    } else {
+      setShowSuggestions(false);
+    }
   };
   
   // 处理按键事件
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter') {
       handleSearchSubmit(event);
+    } else if (event.key === 'Escape') {
+      setShowSuggestions(false);
     }
   };
+  
+  // 处理建议点击
+  const handleSuggestionClick = (suggestion: SearchResult) => {
+    setSearchQuery(suggestion.title);
+    setShowSuggestions(false);
+    history.push(suggestion.url);
+  };
+  
+  // 处理点击外部区域关闭建议
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(event.target as Node)) {
+        setShowSuggestions(false);
+      }
+    }
+    
+    // 添加事件监听
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      // 清理事件监听
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [searchContainerRef]);
+  
+  // 获取搜索建议
+  useEffect(() => {
+    const fetchSuggestions = async () => {
+      if (searchQuery.trim().length < 2) {
+        setSearchSuggestions([]);
+        return;
+      }
+      
+      setIsLoading(true);
+      try {
+        const results = await getSearchSuggestions(searchQuery);
+        setSearchSuggestions(results);
+      } catch (error) {
+        console.error('获取搜索建议失败:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    
+    // 设置防抖，避免每次按键都发请求
+    const debounceTimer = setTimeout(() => {
+      fetchSuggestions();
+    }, 300);
+    
+    return () => clearTimeout(debounceTimer);
+  }, [searchQuery]);
   
   return (
     <header className={clsx('hero', styles.heroBanner)}>
@@ -50,7 +116,7 @@ function HomepageHeader() {
         </div>
         
         {/* 搜索输入框 */}
-        <div className={styles.searchContainer}>
+        <div className={styles.searchContainer} ref={searchContainerRef}>
           <form onSubmit={handleSearchSubmit}>
             <div className={styles.searchInputWrapper}>
               <button 
@@ -75,14 +141,25 @@ function HomepageHeader() {
                 value={searchQuery}
                 onChange={handleSearchInputChange}
                 onKeyDown={handleKeyDown}
+                autoComplete="off"
               />
+              {isLoading && (
+                <div className={styles.loadingIndicator}>
+                  <div className={styles.loadingSpinner}></div>
+                </div>
+              )}
             </div>
           </form>
+          <SearchSuggestions
+            suggestions={searchSuggestions}
+            isVisible={showSuggestions}
+            onSuggestionClick={handleSuggestionClick}
+          />
         </div>
         
         {/* 社区介绍 */}
         <p className={styles.communityDescription} style={{marginTop: '1rem'}}>
-          智识ΑIEΣΣΥΔΟ社区的官方教程仓库，
+          智识ΑIEΣΣΥΔΟ社区的教程仓库，
           <Link to="/docs/引言" className={styles.exploreLink}>
             开始探索
           </Link>
