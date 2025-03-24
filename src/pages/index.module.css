@@ -22,8 +22,8 @@
   width: 100%;
   height: 100%;
   background-image: 
-    linear-gradient(rgba(36, 50, 64, 0.5) 2px, transparent 2px),
-    linear-gradient(90deg, rgba(36, 50, 64, 0.5) 2px, transparent 2px);
+    linear-gradient(#243240 2px, transparent 2px),
+    linear-gradient(90deg, #243240 2px, transparent 2px);
   background-size: 30px 30px; 
   z-index: 0;
 }

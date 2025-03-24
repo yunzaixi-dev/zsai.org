@@ -95,7 +95,7 @@ function HomepageHeader() {
         
         {/* 添加站点描述 */}
         <p className={styles.siteDescription}>
-          <em className={styles.goldText}>这个新社区的名字，就叫做智识ΑIEΣΣΥΔΟ吧 ---- 2025.2.20</em>
+          <em className={styles.goldText}>一个简单，纯粹的开源社区 ---- 2025.2.20</em>
         </p>
       </div>
     </header>
