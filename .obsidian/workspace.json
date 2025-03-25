@@ -11,10 +11,14 @@
             "id": "8d577795c8431557",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "docs/目录/前置知识区/AIGC/酒馆专区/什么是酒馆？.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "什么是酒馆？"
             }
           }
         ]
@@ -161,8 +165,21 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "8d577795c8431557",
+  "active": "5c5af0f185551259",
   "lastOpenFiles": [
+    "docs/酒馆教程专区/酒馆教程专区.md",
+    "docs/酒馆教程专区/酒馆专区.md",
+    "docs/酒馆教程专区",
+    "docs/酒馆专区/酒馆专区.md",
+    "docs/酒馆专区",
+    "docs/目录/实践教程区/简介.md",
+    "docs/目录/前置知识区/AIGC/酒馆专区/什么是酒馆？.md",
+    "docs/目录/前置知识区/AIGC/酒馆专区",
+    "docs/目录/前置知识区/AIGC",
+    "docs/目录/_category_.json",
+    "docs/深度求索/简介.md",
+    "docs/目录/实践教程区",
+    "docs/目录/前置知识区",
     "static/img/blog/community-values.svg",
     "static/img/blog",
     "blog/authors.yml",
@@ -170,20 +187,12 @@
     "docs/万卷书/云原生/云原生简介.md",
     "docs/万卷书/云原生/_category_.json",
     "docs/万卷书/AIGC/AIGC简介.md",
-    "docs/万卷书/AIGC/_category_.json",
-    "docs/万卷书/云原生",
-    "docs/万卷书/_category_.json",
-    "docs/万卷书/AIGC",
-    "docs/万卷书",
     "docs/万里路/img/localeDropdown.png",
     "docs/万里路/img/docsVersionDropdown.png",
     "docs/万里路/translate-your-site.md",
-    "docs/万里路/img",
     "docs/万里路/manage-docs-versions.md",
-    "docs/万里路/_category_.json",
     "docs/岁月史书/野史.md",
     "docs/岁月史书/正史.md",
-    "docs/深度求索/简介.md",
     "docs/不务正业/简介.md",
     "docs/边缘/简介.md",
     "docs/求索/简介.md",
@@ -199,10 +208,6 @@
     "docs/万卷书/AI/AI.md",
     "docs/万卷书/AI.md",
     "docs/万卷书/deploy-your-site.md",
-    "docs/万卷书/create-a-page.md",
-    "docs/万卷书/create-a-document.md",
-    "docs/万卷书/create-a-blog-post.md",
-    "docs/万卷书/congratulations.md",
     "docs/行万里路/img/localeDropdown.png",
     "docs/行万里路/img/docsVersionDropdown.png"
   ]
