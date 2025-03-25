@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/目录/前置知识区/AIGC/酒馆专区/什么是酒馆？.md",
+                "file": "docs/目录/关于本社区/智识ΑIEΣΣΥΔΟ教程仓库/智识ΑIEΣΣΥΔΟ教程仓库.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "什么是酒馆？"
+              "title": "智识ΑIEΣΣΥΔΟ教程仓库"
             }
           }
         ]
@@ -165,7 +165,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5c5af0f185551259",
+  "active": "8d577795c8431557",
   "lastOpenFiles": [
     "docs/酒馆教程专区/酒馆教程专区.md",
     "docs/酒馆教程专区/酒馆专区.md",

@@ -11,7 +11,7 @@ export interface SearchResult {
 }
 
 // 搜索API基础URL - 需要替换为您的实际API URL
-const API_BASE_URL = 'https://api.zs.zaixi.com';
+const API_BASE_URL = 'https://api-zsai.zaixi.com';
 
 /**
  * 根据查询文本获取搜索建议
