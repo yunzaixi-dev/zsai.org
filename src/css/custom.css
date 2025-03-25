@@ -199,7 +199,6 @@
 .footer__bottom a {
   color: #0175C2;
   transition: color 0.2s ease;
-  text-decoration: none;
 }
 
 .footer__bottom a:hover {
@@ -437,14 +436,21 @@ html[data-theme='dark'] .navbar__link--active {
 /* Markdown样式 */
 
 /* Markdown标题样式 */
-.markdown h1 {
+html[data-theme='light'] .markdown h1,
+html[data-theme='light'] .markdown h2,
+html[data-theme='light'] .markdown h3,
+html[data-theme='light'] .markdown h4,
+html[data-theme='light'] .markdown h5,
+html[data-theme='light'] .markdown h6 {
   color: #4a6da7;
+}
+
+.markdown h1 {
   border-bottom: 2px solid #ccd9ef;
   padding-bottom: 0.3em;
 }
 
 .markdown h2 {
-  color: #4a6da7;
   border-bottom: 1px solid #dae2f3;
   padding-bottom: 0.2em;
 }
@@ -472,6 +478,14 @@ html[data-theme='dark'] .markdown h1 {
 
 html[data-theme='dark'] .markdown h2 {
   border-bottom: 1px solid #4675a6;
+}
+
+/* 确保标题在移动端显示合适 */
+@media (max-width: 996px) {
+  .markdown h1, .markdown h2, .markdown h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
 }
 
 /* Markdown卡片样式 */
