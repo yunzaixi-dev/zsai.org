@@ -1,0 +1,46 @@
+{
+  "theme.ErrorPageContent.title": {
+    "message": "This page crashed.",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.NotFound.title": {
+    "message": "Page Not Found",
+    "description": "The title of the 404 page"
+  },
+  "theme.NotFound.p1": {
+    "message": "We could not find what you were looking for.",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
+    "description": "The 2nd paragraph of the 404 page"
+  },
+  "homepage.tagline": {
+    "message": "Support by ZSAI ΑIEΣΣΥΔΟ",
+    "description": "Homepage tagline"
+  },
+  "homepage.features.equality.title": {
+    "message": "Equality",
+    "description": "Title for equality feature"
+  },
+  "homepage.features.equality.description": {
+    "message": "Equality for all is the foundation of our community. Regardless of your background, experience, or expertise, every member's voice is equally valued, and every perspective deserves to be heard.",
+    "description": "Description for equality feature"
+  },
+  "homepage.features.openness.title": {
+    "message": "Openness",
+    "description": "Title for openness feature"
+  },
+  "homepage.features.openness.description": {
+    "message": "We embrace open ideas and transparent collaboration. Knowledge has no boundaries, our community has no barriers, and the open-source spirit guides us to explore unknown possibilities together.",
+    "description": "Description for openness feature"
+  },
+  "homepage.features.sharing.title": {
+    "message": "Sharing",
+    "description": "Title for sharing feature"
+  },
+  "homepage.features.sharing.description": {
+    "message": "Sharing is the core of value creation. By sharing experiences, code, and wisdom, we build a tightly connected network where every contribution can have a greater impact.",
+    "description": "Description for sharing feature"
+  }
+}

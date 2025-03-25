@@ -20,15 +20,15 @@ const config: Config = {
   organizationName: 'yunzaixi-dev', // Usually your GitHub org/user name.
   projectName: 'zs-docs', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-CN',
+    locales: ['zh-CN', 'en'],
   },
 
   presets: [
@@ -80,8 +80,7 @@ const config: Config = {
     },
     announcementBar: {
       id: 'support_us',
-      content:
-        '智识ΑIEΣΣΥΔΟ - 平等、开放、共享的开源社区 💙',
+      content: '智识ΑIEΣΣΥΔΟ - 平等、开放、共享的开源社区 💙',
       backgroundColor: '#0175C2',
       textColor: '#ffffff',
       isCloseable: true,
@@ -100,6 +99,10 @@ const config: Config = {
           label: '教程',
         },
         {to: '/blog', label: '博客', position: 'left'},
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
         {
           href: 'https://discord.gg/DaePbQXhnH',
           label: 'Discord',
