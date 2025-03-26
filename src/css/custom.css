@@ -26,7 +26,7 @@
   --ifm-color-primary-darkest: #3a6189;
   --ifm-color-primary-light: #6e97c2;
   --ifm-color-primary-lighter: #7ba0c7;
-  --ifm-color-primary-lightest: #97b4d5;
+  --ifm-color-primary-lightest: #5d8aba;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -485,7 +485,7 @@ html[data-theme='dark'] .markdown h3,
 html[data-theme='dark'] .markdown h4,
 html[data-theme='dark'] .markdown h5,
 html[data-theme='dark'] .markdown h6 {
-  color: #97b4d5;
+  color: #5d8aba;
 }
 
 html[data-theme='dark'] .markdown h1 {
@@ -551,7 +551,7 @@ html[data-theme='dark'] .admonition-tip {
 }
 
 html[data-theme='dark'] .admonition-info {
-  border-left-color: #97b4d5;
+  border-left-color: #5d8aba;
   background-color: rgba(151, 180, 213, 0.15);
 }
 
@@ -581,7 +581,7 @@ html[data-theme='dark'] .markdown a {
 }
 
 html[data-theme='dark'] .markdown a:hover {
-  color: #97b4d5;
+  color: #5d8aba;
 }
 
 /* 代码块和内联代码 */
