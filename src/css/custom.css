@@ -584,3 +584,18 @@ html[data-theme='dark'] .markdown code {
   background-color: rgba(93, 138, 186, 0.15);
   color: #7ba0c7;
 }
+
+/* 确保手机端侧边栏的字体在任何模式下都保持浅色 */
+@media (max-width: 996px) {
+  .menu__link {
+    color: #f2ead0 !important;
+  }
+  
+  .menu__link:hover {
+    color: #f2ead0 !important;
+  }
+  
+  .menu__link--active {
+    color: #f2ead0 !important;
+  }
+}
