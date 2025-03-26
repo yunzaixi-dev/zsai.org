@@ -451,7 +451,8 @@ html[data-theme='dark'] .navbar__link--active {
 
 /* Markdown样式 */
 
-/* Markdown标题样式 - 只为h2-h6设置样式 */
+/* Markdown标题样式 - 恢复h1的样式 */
+html[data-theme='light'] .markdown h1,
 html[data-theme='light'] .markdown h2,
 html[data-theme='light'] .markdown h3,
 html[data-theme='light'] .markdown h4,
@@ -461,9 +462,8 @@ html[data-theme='light'] .markdown h6 {
 }
 
 .markdown h1 {
-  /* 移除自定义样式，使用原始样式 */
-  border-bottom: none;
-  padding-bottom: 0;
+  border-bottom: 2px solid #ccd9ef;
+  padding-bottom: 0.3em;
 }
 
 .markdown h2 {
@@ -478,7 +478,8 @@ html[data-theme='light'] .markdown h6 {
   color: #2f6a8c;
 }
 
-/* 暗色模式下的标题颜色 - 只为h2-h6设置样式 */
+/* 暗色模式下的标题颜色 - 恢复h1的样式 */
+html[data-theme='dark'] .markdown h1,
 html[data-theme='dark'] .markdown h2,
 html[data-theme='dark'] .markdown h3,
 html[data-theme='dark'] .markdown h4,
@@ -487,11 +488,8 @@ html[data-theme='dark'] .markdown h6 {
   color: #f2ead0;
 }
 
-/* 删除h1的暗色模式自定义样式 */
 html[data-theme='dark'] .markdown h1 {
-  /* 移除自定义样式，使用原始样式 */
-  border-bottom: none;
-  color: inherit;
+  border-bottom: 2px solid #4675a6;
 }
 
 /* Markdown卡片样式 */
