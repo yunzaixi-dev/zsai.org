@@ -20,13 +20,13 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #1793d1;
+  --ifm-color-primary: #f2ead0;
   --ifm-color-primary-dark: #4c7cae;
   --ifm-color-primary-darker: #4675a6;
   --ifm-color-primary-darkest: #3a6189;
   --ifm-color-primary-light: #6e97c2;
   --ifm-color-primary-lighter: #7ba0c7;
-  --ifm-color-primary-lightest: #1793d1;
+  --ifm-color-primary-lightest: #f2ead0;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -43,7 +43,7 @@
 
 /* 确保暗模式下链接颜色可见 */
 [data-theme='dark'] .markdown a {
-  color: #1793d1;
+  color: #f2ead0;
 }
 
 /* 优化页脚样式 */
@@ -451,8 +451,7 @@ html[data-theme='dark'] .navbar__link--active {
 
 /* Markdown样式 */
 
-/* Markdown标题样式 */
-html[data-theme='light'] .markdown h1,
+/* Markdown标题样式 - 只为h2-h6设置样式 */
 html[data-theme='light'] .markdown h2,
 html[data-theme='light'] .markdown h3,
 html[data-theme='light'] .markdown h4,
@@ -462,8 +461,9 @@ html[data-theme='light'] .markdown h6 {
 }
 
 .markdown h1 {
-  border-bottom: 2px solid #ccd9ef;
-  padding-bottom: 0.3em;
+  /* 移除自定义样式，使用原始样式 */
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .markdown h2 {
@@ -478,30 +478,20 @@ html[data-theme='light'] .markdown h6 {
   color: #2f6a8c;
 }
 
-/* 暗色模式下的标题颜色 */
-html[data-theme='dark'] .markdown h1,
+/* 暗色模式下的标题颜色 - 只为h2-h6设置样式 */
 html[data-theme='dark'] .markdown h2,
 html[data-theme='dark'] .markdown h3,
 html[data-theme='dark'] .markdown h4,
 html[data-theme='dark'] .markdown h5,
 html[data-theme='dark'] .markdown h6 {
-  color: #1793d1;
+  color: #f2ead0;
 }
 
+/* 删除h1的暗色模式自定义样式 */
 html[data-theme='dark'] .markdown h1 {
-  border-bottom: 2px solid #4675a6;
-}
-
-html[data-theme='dark'] .markdown h2 {
-  border-bottom: 1px solid #4675a6;
-}
-
-/* 确保标题在移动端显示合适 */
-@media (max-width: 996px) {
-  .markdown h1, .markdown h2, .markdown h3 {
-    font-size: 1.5rem;
-    line-height: 1.3;
-  }
+  /* 移除自定义样式，使用原始样式 */
+  border-bottom: none;
+  color: inherit;
 }
 
 /* Markdown卡片样式 */
@@ -537,7 +527,7 @@ html[data-theme='dark'] .markdown h2 {
 
 /* 暗色模式下的卡片样式 */
 html[data-theme='dark'] .admonition {
-  border-left: 6px solid #1793d1;
+  border-left: 6px solid #f2ead0;
   box-shadow: 0 2px 8px rgba(93, 138, 186, 0.2);
 }
 
@@ -551,7 +541,7 @@ html[data-theme='dark'] .admonition-tip {
 }
 
 html[data-theme='dark'] .admonition-info {
-  border-left-color: #1793d1;
+  border-left-color: #f2ead0;
   background-color: rgba(151, 180, 213, 0.15);
 }
 
@@ -577,11 +567,11 @@ html[data-theme='dark'] .admonition-danger {
 }
 
 html[data-theme='dark'] .markdown a {
-  color: #1793d1;
+  color: #f2ead0;
 }
 
 html[data-theme='dark'] .markdown a:hover {
-  color: #1793d1;
+  color: #f2ead0;
 }
 
 /* 代码块和内联代码 */
