@@ -1,0 +1,8 @@
+.darkModeImage {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* 可选：为图片添加过渡效果 */
+img {
+  transition: filter 0s ease;
+}
