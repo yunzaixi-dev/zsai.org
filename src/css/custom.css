@@ -6,7 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #0077bb;
+  --ifm-color-primary: #2f6a8c;
   --ifm-color-primary-dark: #425f95;
   --ifm-color-primary-darker: #3e5a8d;
   --ifm-color-primary-darkest: #334a74;
@@ -32,7 +32,7 @@
 
 /* 设置Markdown内容区域的链接颜色 */
 .markdown a {
-  color: #0077bb;
+  color: #2f6a8c;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -458,7 +458,7 @@ html[data-theme='light'] .markdown h3,
 html[data-theme='light'] .markdown h4,
 html[data-theme='light'] .markdown h5,
 html[data-theme='light'] .markdown h6 {
-  color: #0077bb;
+  color: #2f6a8c;
 }
 
 .markdown h1 {
@@ -475,7 +475,7 @@ html[data-theme='light'] .markdown h6 {
 .markdown h4, 
 .markdown h5, 
 .markdown h6 {
-  color: #0077bb;
+  color: #2f6a8c;
 }
 
 /* 暗色模式下的标题颜色 */
@@ -507,7 +507,7 @@ html[data-theme='dark'] .markdown h2 {
 /* Markdown卡片样式 */
 .admonition {
   border-radius: 8px;
-  border-left: 6px solid #0077bb;
+  border-left: 6px solid #2f6a8c;
   box-shadow: 0 2px 8px rgba(74, 109, 167, 0.15);
 }
 
@@ -567,7 +567,7 @@ html[data-theme='dark'] .admonition-danger {
 
 /* 链接样式 */
 .markdown a {
-  color: #0077bb;
+  color: #2f6a8c;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -587,7 +587,7 @@ html[data-theme='dark'] .markdown a:hover {
 /* 代码块和内联代码 */
 .markdown code {
   background-color: rgba(74, 109, 167, 0.1);
-  color: #0077bb;
+  color: #2f6a8c;
   padding: 0.2em 0.4em;
   border-radius: 3px;
 }
