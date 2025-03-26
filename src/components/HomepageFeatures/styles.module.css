@@ -38,7 +38,7 @@ html[data-theme='dark'] .features::before {
   align-items: center;
   justify-content: flex-start;
   transition: all 0.3s ease;
-  border: 1px solid #4a6da7;
+  border: 1px solid #0077bb;
   text-align: center;
   box-shadow: 0 5px 15px rgba(74, 109, 167, 0.08);
 }
@@ -51,7 +51,7 @@ html[data-theme='dark'] .featureCard {
 .featureCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(74, 109, 167, 0.15);
-  border-color: #4a6da7;
+  border-color: #0077bb;
 }
 
 html[data-theme='dark'] .featureCard:hover {
@@ -66,7 +66,7 @@ html[data-theme='dark'] .featureCard:hover {
   left: 0;
   right: 0;
   height: 3px;
-  background: #4a6da7;
+  background: #0077bb;
   transform: scaleX(0.3);
   transition: transform 0.3s ease;
 }
@@ -150,7 +150,7 @@ html[data-theme='dark'] .featureCard:hover .featureSvgWrapper::after {
 .featureSvg {
   width: 70px;
   height: 70px;
-  fill: #4a6da7;
+  fill: #0077bb;
   transition: all 0.3s ease;
 }
 
@@ -167,7 +167,7 @@ html[data-theme='dark'] .featureSvg {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #4a6da7;
+  color: #0077bb;
 }
 
 html[data-theme='dark'] .featureTitle {
