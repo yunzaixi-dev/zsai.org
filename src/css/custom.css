@@ -20,13 +20,13 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #5d8aba;
+  --ifm-color-primary: #1793d1;
   --ifm-color-primary-dark: #4c7cae;
   --ifm-color-primary-darker: #4675a6;
   --ifm-color-primary-darkest: #3a6189;
   --ifm-color-primary-light: #6e97c2;
   --ifm-color-primary-lighter: #7ba0c7;
-  --ifm-color-primary-lightest: #5d8aba;
+  --ifm-color-primary-lightest: #1793d1;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -43,7 +43,7 @@
 
 /* 确保暗模式下链接颜色可见 */
 [data-theme='dark'] .markdown a {
-  color: #5d8aba;
+  color: #1793d1;
 }
 
 /* 优化页脚样式 */
@@ -485,7 +485,7 @@ html[data-theme='dark'] .markdown h3,
 html[data-theme='dark'] .markdown h4,
 html[data-theme='dark'] .markdown h5,
 html[data-theme='dark'] .markdown h6 {
-  color: #5d8aba;
+  color: #1793d1;
 }
 
 html[data-theme='dark'] .markdown h1 {
@@ -537,7 +537,7 @@ html[data-theme='dark'] .markdown h2 {
 
 /* 暗色模式下的卡片样式 */
 html[data-theme='dark'] .admonition {
-  border-left: 6px solid #5d8aba;
+  border-left: 6px solid #1793d1;
   box-shadow: 0 2px 8px rgba(93, 138, 186, 0.2);
 }
 
@@ -551,7 +551,7 @@ html[data-theme='dark'] .admonition-tip {
 }
 
 html[data-theme='dark'] .admonition-info {
-  border-left-color: #5d8aba;
+  border-left-color: #1793d1;
   background-color: rgba(151, 180, 213, 0.15);
 }
 
@@ -577,11 +577,11 @@ html[data-theme='dark'] .admonition-danger {
 }
 
 html[data-theme='dark'] .markdown a {
-  color: #5d8aba;
+  color: #1793d1;
 }
 
 html[data-theme='dark'] .markdown a:hover {
-  color: #5d8aba;
+  color: #1793d1;
 }
 
 /* 代码块和内联代码 */
