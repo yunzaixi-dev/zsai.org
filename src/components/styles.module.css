@@ -1,5 +1,26 @@
+.imageContainer {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  line-height: 0;
+}
+
+.canvasImage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.hiddenImage {
+  display: none;
+}
+
 .darkModeImage {
-  filter: invert(1) hue-rotate(180deg);
+  /* 使用多个滤镜组合来实现自定义反色效果 */
+  filter: brightness(0.8) contrast(1.2) hue-rotate(180deg);
+  /* 通过背景色来模拟将白色转换为特定的深色 */
+  background-color: #1b1b1d;
+  mix-blend-mode: difference;
 }
 
 /* 可选：为图片添加过渡效果 */
