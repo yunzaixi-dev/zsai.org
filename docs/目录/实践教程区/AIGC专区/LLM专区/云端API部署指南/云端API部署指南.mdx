@@ -12,10 +12,49 @@ Token是运行一切LLM服务的基础，而云端API服务可以源源不断地
 
 <DarkModeImage src={require('./image-1.png').default} alt="账号轮询服务示意图" />
 
+### 1.1 Gemini轮询服务
+Gemini轮询服务是指将多个具有少量免费额度的Google账号部署在轮询服务中，当一个账号使用完毕后，会自动切换到下一个账号，从而获得较大的API免费额度，实现白嫖。
+
+体验： ⭐⭐⭐
+
+性价比： ⭐⭐⭐⭐⭐
+
+:::info 教程
+详见 [Gemini轮询服务(未完成)](/docs/目录/实践教程区/AIGC专区/LLM专区/云端API部署指南/轮询服务/Gemini轮询服务/Gemini轮询服务.md)
+:::
+
+### 1.2 Grok轮询服务
+Grok轮询服务是指将多个具有少量免费额度的X账号部署在轮询服务中，当一个账号使用完毕后，会自动切换到下一个账号，从而获得较大的API免费额度，实现白嫖。
+:::info 教程
+详见 [Grok轮询服务(未完成)](/docs/目录/实践教程区/AIGC专区/LLM专区/云端API部署指南/轮询服务/Grok轮询服务/Grok轮询服务.md)
+:::
+
 ## 2. 逆向API服务
 逆向API服务是指将主流的LLM应用进行逆向，从而将AI订阅转换为API。
 
 <DarkModeImage src={require('./image-2.png').default} alt="逆向API服务示意图" />
 
-## 3. 本地API服务
+### 2.1 Claude逆向服务(又被称作clewd退款流)
+- Claude逆向服务可以将Claude账号转换为API。  
+- 由于Claude Pro可以拥有更高额度，更高性能的AI，因此更适合逆向。  
+- 所谓退款流，就是利用Claude Pro的封号全额退款机制反复白嫖Claude Pro账号转换为API。  
+- 当然如今Claude升级了安全措施，部分账号会被给予警告，大幅度限制额度，不会退款。  
+- 因此事实上，目前的退款流并不算一个非常稳定的方案，不过依旧非常流行。  
+
+:::info 教程
+详见 [Claude逆向服务](/docs/目录/实践教程区/AIGC专区/LLM专区/云端API部署指南/逆向API服务/Claude逆向服务/Claude逆向服务.md)
+:::
+
+### 2.2 You逆向服务(又被称作You反代)
+You逆向服务是将You Pro账号转换为稳定API的服务。
+- 相较于Clewd而言，更加稳定，提供的token数量更多，不会出现警告情况
+- 但是相应的，响应时间较慢，而且不支持酒馆的温度，Max Token等设定
+- 无法白嫖，需要购买You Pro账号
+- 是目前最流行的方案之一，仅次于Clewd
+
+:::info 教程
+详见 [You逆向服务](/docs/目录/实践教程区/AIGC专区/LLM专区/云端API部署指南/逆向API服务/You逆向服务/You逆向服务.md)
+:::
+
+## 3. 本地API服务(待补充)
 本地API服务是指将主流的LLM应用部署在本地，从而产出API。
