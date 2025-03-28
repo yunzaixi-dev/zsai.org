@@ -31,6 +31,12 @@ const config: Config = {
     locales: ['zh-CN', 'en'],
   },
 
+  // 启用 Mermaid 主题支持
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   presets: [
     [
       'classic',
@@ -114,6 +120,10 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    // 配置 Mermaid 选项
+    mermaid: {
+      theme: {light: 'neutral', dark: 'forest'},
     },
   } satisfies Preset.ThemeConfig,
 };
