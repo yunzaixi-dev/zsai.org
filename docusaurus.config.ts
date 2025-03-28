@@ -123,7 +123,41 @@ const config: Config = {
     },
     // 配置 Mermaid 选项
     mermaid: {
-      theme: {light: 'neutral', dark: 'forest'},
+      theme: {light: 'default', dark: 'dark'},
+      options: {
+        themeVariables: {
+          // 亮色主题变量
+          primaryColor: '#5271ff',
+          primaryTextColor: '#323232',
+          primaryBorderColor: '#7C84FF',
+          lineColor: '#5271ff',
+          secondaryColor: '#6CA0FF',
+          tertiaryColor: '#EDF2FF',
+          // 节点样式
+          nodeBorder: '#5271ff',
+          nodeBackgroundColor: '#EDF2FF',
+          mainBkg: '#f8fafd',
+          // 文本颜色
+          textColor: '#323232',
+          // 边框和箭头
+          clusterBkg: '#F5F8FE',
+          clusterBorder: '#5271ff',
+          // 字体和边距
+          fontSize: '16px',
+          labelBackground: '#EDF2FF',
+        },
+        // 全局样式设置
+        fontFamily: 'Segoe UI, Roboto, sans-serif',
+        fontSize: 14,
+        flowchart: {
+          curve: 'basis',
+          htmlLabels: true,
+          padding: 15,
+          nodeSpacing: 30,
+          rankSpacing: 80,
+          useMaxWidth: true,
+        },
+      },
     },
   } satisfies Preset.ThemeConfig,
 };
