@@ -37,6 +37,25 @@ const config: Config = {
   },
   themes: ['@docusaurus/theme-mermaid'],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        id: 'custom-sitemap', // 添加唯一ID以区分默认插件
+        lastmod: 'date',
+        changefreq: 'weekly',
+        priority: 0.5,
+        ignorePatterns: ['/tags/**'],
+        filename: 'sitemap.xml',
+        createSitemapItems: async (params) => {
+          const {defaultCreateSitemapItems, ...rest} = params;
+          const items = await defaultCreateSitemapItems(rest);
+          return items.filter((item) => !item.url.includes('/page/'));
+        },
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
