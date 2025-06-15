@@ -31,11 +31,10 @@ const config: Config = {
     locales: ['zh-CN', 'en'],
   },
 
-  // 启用 Mermaid 主题支持
+  // Mermaid 主题已移除
   markdown: {
-    mermaid: true,
+    // mermaid: true, // Mermaid 已移除
   },
-  themes: ['@docusaurus/theme-mermaid'],
 
   plugins: [
     [
@@ -140,44 +139,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-    // 配置 Mermaid 选项
-    mermaid: {
-      theme: {light: 'default', dark: 'dark'},
-      options: {
-        themeVariables: {
-          // 亮色主题变量
-          primaryColor: '#5271ff',
-          primaryTextColor: '#323232',
-          primaryBorderColor: '#7C84FF',
-          lineColor: '#5271ff',
-          secondaryColor: '#6CA0FF',
-          tertiaryColor: '#EDF2FF',
-          // 节点样式
-          nodeBorder: '#5271ff',
-          nodeBackgroundColor: '#EDF2FF',
-          mainBkg: '#f8fafd',
-          // 文本颜色
-          textColor: '#323232',
-          // 边框和箭头
-          clusterBkg: '#F5F8FE',
-          clusterBorder: '#5271ff',
-          // 字体和边距
-          fontSize: '16px',
-          labelBackground: '#EDF2FF',
-        },
-        // 全局样式设置
-        fontFamily: 'Segoe UI, Roboto, sans-serif',
-        fontSize: 14,
-        flowchart: {
-          curve: 'basis',
-          htmlLabels: true,
-          padding: 15,
-          nodeSpacing: 30,
-          rankSpacing: 80,
-          useMaxWidth: true,
-        },
-      },
-    },
+    // Mermaid 主题配置已移除
   } satisfies Preset.ThemeConfig,
 };
 
